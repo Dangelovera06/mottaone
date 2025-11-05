@@ -86,14 +86,15 @@ export default function Blueprint() {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-full sm:w-auto inline-flex items-center gap-2 sm:gap-3 px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 rounded-xl bg-gradient-to-b from-[#0080ff] via-[#006eff] to-[#0050cc] text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,110,255,0.5),0_0_40px_rgba(0,110,255,0.3),0_0_60px_rgba(0,110,255,0.2)]"
+            className="relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#0080ff] via-[#006eff] to-[#0050cc] text-white font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,110,255,0.5),0_0_40px_rgba(0,110,255,0.3),0_0_60px_rgba(0,110,255,0.2)]"
+            style="width: 397.2px; height: 62.4px; max-width: 100%;"
           >
             <span 
               className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/20 via-transparent to-transparent"
             />
-            <span className="relative z-10 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed flex items-center justify-center gap-2 sm:gap-3">
-              <span className="whitespace-nowrap">Apply Today</span>
-              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 flex-shrink-0" />
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              <span>Apply Today</span>
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
             </span>
           </a>
         </motion.div>

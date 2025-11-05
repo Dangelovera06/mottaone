@@ -68,6 +68,20 @@ export default function Hero() {
               Apply Today
             </RainbowButton>
           </motion.div>
+
+          {/* Performance Image Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-8 mb-6 md:mb-8 max-w-5xl mx-auto w-full px-4"
+          >
+            <img 
+              src="/Momoento Perfom.png" 
+              alt="Performance Results" 
+              className="w-full h-auto"
+            />
+          </motion.div>
         </div>
       </div>
     </BeamsBackground>

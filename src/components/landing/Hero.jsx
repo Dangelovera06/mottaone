@@ -16,18 +16,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-4"
           >
-                      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-snug px-2">
-                        From Content Creator to <br className="sm:hidden" />
+                      <h1 className="text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight px-2">
+                        From Content Creator to <br className="hidden sm:inline" />
                         <span className="relative inline-block overflow-hidden bg-gradient-to-b from-[#0080ff] via-[#006eff] to-[#0050cc] bg-clip-text text-transparent">
                           <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-clip-text text-transparent" style={{ left: '30%', width: '40%' }}></span>
                           <span className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent bg-clip-text text-transparent"></span>
-                          Six-Figure Business
-                        </span>{' '}<br className="sm:hidden" />
-                        <span className="relative inline-block overflow-hidden bg-gradient-to-b from-[#0080ff] via-[#006eff] to-[#0050cc] bg-clip-text text-transparent">
-                          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-clip-text text-transparent" style={{ left: '30%', width: '40%' }}></span>
-                          <span className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent bg-clip-text text-transparent"></span>
-                          Owner in 30 Days
-                        </span>
+                          Six-Figure Business Owner
+                        </span> in 30 Days
                       </h1>
 
                       <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light px-2">

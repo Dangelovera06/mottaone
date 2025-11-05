@@ -14,22 +14,23 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-4"
+            className="space-y-6"
           >
-                      <h1 className="text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight px-2">
-                        From Content Creator to <br className="hidden sm:inline" />
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-                          Six-Figure Business Owner
-                        </span> in 30 Days
-                      </h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight px-2">
+              From Content Creator to{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
+                Six-Figure Business Owner
+              </span>{' '}
+              in 30 Days
+            </h1>
 
-                      <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light px-2">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-                          (without needing tech skills or marketing experience)
-                        </span>
-                      </p>
-            
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white pt-2 px-2">
+            <p className="text-lg sm:text-xl md:text-2xl font-light px-2 text-white/80">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
+                (without needing tech skills or marketing experience)
+              </span>
+            </p>
+
+            <p className="text-base sm:text-lg md:text-xl text-white/90 pt-2 px-2 font-medium">
               If you don't make money, we don't get paid — simple as that
             </p>
           </motion.div>

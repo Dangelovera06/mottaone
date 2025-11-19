@@ -10,7 +10,7 @@ export default function Hero() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/drive-download-20251119T185717Z-1-001/header image.HEIC)',
+            backgroundImage: 'url(/drive-download-20251119T185717Z-1-001/header-image.jpg)',
           }}
         />
         

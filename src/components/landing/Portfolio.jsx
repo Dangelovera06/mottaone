@@ -6,13 +6,10 @@ const categories = ["All", "Kitchens", "Bathrooms", "Outdoor", "Custom"];
 const projects = [
   { id: 1, category: "Kitchens", title: "Modern Kitchen Remodel", description: "Marble countertops & backsplash", image: "/drive-download-20251119T185717Z-1-001/81141859-57bb-4dc3-a7f4-df52821b984f.JPG" },
   { id: 2, category: "Bathrooms", title: "Luxury Bathroom Suite", description: "Granite vanity & shower walls", image: "/drive-download-20251119T185717Z-1-001/b9d31734-1fda-4f3f-a4ad-f7b8f3e4f6eb.JPG" },
-  { id: 3, category: "Outdoor", title: "Patio Paradise", description: "Stone outdoor kitchen", image: "/drive-download-20251119T185717Z-1-001/f8d9b399-67c8-4f36-b656-1234139af034.JPG" },
-  { id: 4, category: "Kitchens", title: "Contemporary Kitchen", description: "Quartz island & counters", image: "/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" },
-  { id: 5, category: "Custom", title: "Statement Fireplace", description: "Natural stone feature wall", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },
-  { id: 6, category: "Bathrooms", title: "Spa Bathroom", description: "Marble floors & walls", image: "/drive-download-20251119T185717Z-1-001/IMG_6992.PNG" },
-  { id: 7, category: "Outdoor", title: "Garden Oasis", description: "Stone pathways & seating", image: "/drive-download-20251119T185717Z-1-001/IMG_6993.PNG" },
-  { id: 8, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/IMG_6994.PNG" },
-  { id: 9, category: "Kitchens", title: "Classic Kitchen", description: "Granite countertops", image: "/drive-download-20251119T185717Z-1-001/IMG_6995.PNG" },
+  { id: 3, category: "Kitchens", title: "Contemporary Kitchen", description: "Quartz island & counters", image: "/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" },
+  { id: 4, category: "Custom", title: "Statement Fireplace", description: "Natural stone feature wall", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },
+  { id: 5, category: "Bathrooms", title: "Spa Bathroom", description: "Marble floors & walls", image: "/drive-download-20251119T185717Z-1-001/IMG_6992.PNG" },
+  { id: 6, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/IMG_6994.PNG" },
 ];
 
 export default function Portfolio() {
@@ -33,37 +30,20 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-6">
-            <span className="text-sm font-medium text-gold-700">Our Work</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-4">
+            <span className="text-sm font-medium text-gold-700">Recent Projects</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Featured Projects
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            See What We Can Do For You
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore our portfolio of stunning transformations
+          <p className="text-lg text-gray-600">
+            Real transformations, real results
           </p>
         </motion.div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
-                activeCategory === category
-                  ? "bg-black text-white shadow-lg"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -107,16 +87,18 @@ export default function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
-          <p className="text-gray-600 mb-6">Ready to start your transformation?</p>
+          <p className="text-lg text-gray-700 font-semibold mb-4">
+            Your transformation could be next! 👇
+          </p>
           <button
             onClick={() => {
               document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }}
-            className="px-8 py-4 bg-black text-white text-base font-semibold rounded-lg hover:bg-gold-500 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="px-8 py-4 bg-gold-500 text-white text-lg font-bold rounded-lg hover:bg-gold-600 transition-all duration-300 hover:scale-105 shadow-lg"
           >
-            Get Your Free Estimate
+            Start My Project Today →
           </button>
         </motion.div>
       </div>

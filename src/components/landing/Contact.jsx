@@ -38,16 +38,19 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-6">
-            <span className="text-sm font-medium text-gold-700">Get In Touch</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-4">
+            <span className="text-sm font-bold text-gold-700">📞 Get Your Free Quote</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Start Your Project Today
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+            Let's Get Started
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your space? Get a free consultation and quote
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-2">
+            Fill out the form below and we'll contact you within <span className="text-gold-600 font-bold">24 hours</span>
+          </p>
+          <p className="text-sm text-gray-500">
+            ✓ No obligation • ✓ Free consultation • ✓ Detailed quote
           </p>
         </motion.div>
 
@@ -58,7 +61,14 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
           >
+            <div className="mb-6 p-4 bg-gold-50 rounded-lg border border-gold-200">
+              <p className="text-sm font-semibold text-gold-700 text-center">
+                🎉 Special Offer: Free material upgrade on projects booked this month!
+              </p>
+            </div>
+            
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -153,10 +163,14 @@ export default function Contact() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-black text-white text-base font-semibold rounded-lg hover:bg-gold-500 transition-all duration-300 hover:scale-105 shadow-lg"
+                className="w-full px-8 py-5 bg-gold-500 text-white text-lg font-bold rounded-lg hover:bg-gold-600 transition-all duration-300 hover:scale-105 shadow-xl"
               >
-                Request Free Quote
+                Get My Free Quote Now →
               </button>
+              
+              <p className="text-xs text-center text-gray-500">
+                By submitting, you agree to receive communication from Motta One. We respect your privacy.
+              </p>
             </form>
           </motion.div>
 

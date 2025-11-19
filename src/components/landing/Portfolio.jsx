@@ -1,24 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-
-const categories = ["All", "Kitchens", "Bathrooms", "Outdoor", "Custom"];
 
 const projects = [
   { id: 1, category: "Kitchens", title: "Modern Kitchen Remodel", description: "Marble countertops & backsplash", image: "/drive-download-20251119T185717Z-1-001/81141859-57bb-4dc3-a7f4-df52821b984f.JPG" },
-  { id: 2, category: "Bathrooms", title: "Luxury Bathroom Suite", description: "Granite vanity & shower walls", image: "/drive-download-20251119T185717Z-1-001/b9d31734-1fda-4f3f-a4ad-f7b8f3e4f6eb.JPG" },
+  { id: 2, category: "Kitchens", title: "Modern Redesign", description: "Complete kitchen transformation", image: "/drive-download-20251119T185717Z-1-001/modern redesign.JPG" },
   { id: 3, category: "Kitchens", title: "Contemporary Kitchen", description: "Quartz island & counters", image: "/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" },
-  { id: 4, category: "Custom", title: "Statement Fireplace", description: "Natural stone feature wall", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },
-  { id: 5, category: "Bathrooms", title: "Spa Bathroom", description: "Marble floors & walls", image: "/drive-download-20251119T185717Z-1-001/IMG_6992.PNG" },
-  { id: 6, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/IMG_6994.PNG" },
+  { id: 4, category: "Custom", title: "Premium Stone Feature", description: "Natural stone installation", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },
+  { id: 5, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/accetnt wall.HEIC" },
+  { id: 6, category: "Custom", title: "Outdoor Stone Work", description: "Premium outdoor installation", image: "/drive-download-20251119T185717Z-1-001/f8d9b399-67c8-4f36-b656-1234139af034.JPG" },
 ];
 
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
-
   return (
     <section id="portfolio" className="py-20 md:py-32 bg-white relative overflow-hidden">
       {/* Subtle Background Gradients */}

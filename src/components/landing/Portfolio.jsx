@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
-  { id: 1, category: "Kitchens", title: "Modern Kitchen Remodel", description: "Marble countertops & backsplash", image: "/drive-download-20251119T185717Z-1-001/81141859-57bb-4dc3-a7f4-df52821b984f.JPG" },
+  { id: 1, category: "Kitchens", title: "Modern Kitchen Remodel", description: "Marble countertops & backsplash", image: "/drive-download-20251119T185717Z-1-001/modern kitch re.png" },
   { id: 2, category: "Kitchens", title: "Modern Redesign", description: "Complete kitchen transformation", image: "/drive-download-20251119T185717Z-1-001/modern redesign.JPG" },
   { id: 3, category: "Kitchens", title: "Contemporary Kitchen", description: "Quartz island & counters", image: "/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" },
   { id: 4, category: "Custom", title: "Premium Stone Feature", description: "Natural stone installation", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },

@@ -45,19 +45,21 @@ export default function Hero() {
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-white drop-shadow-lg">Premium Stone</span>
+              <span className="text-white" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.6)' }}>
+                Premium Stone
+              </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600 drop-shadow-lg">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0px 0px 20px rgba(0,0,0,0.6)' }}>
                 Remodeling Done Right
               </span>
             </h1>
 
             {/* Value Proposition */}
             <div className="space-y-3">
-              <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg">
+              <p className="text-xl md:text-2xl text-white font-semibold" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0px 0px 15px rgba(0,0,0,0.6)' }}>
                 Get Your Dream Kitchen or Bathroom in Just 1-2 Weeks
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed max-w-xl drop-shadow-md">
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}>
                 Premium materials • Expert craftsmanship • Lifetime warranty
               </p>
             </div>

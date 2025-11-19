@@ -14,10 +14,12 @@ export default function Landing() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/95 border-b border-gray-800 shadow-lg">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-bold tracking-tight text-white">
-              MOTTA <span className="text-gold-500">ONE</span>
-            </span>
+          <div className="flex items-center gap-3">
+            <img 
+              src="/motta one.webp" 
+              alt="Motta One Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
           </div>
 
           {/* Urgency Badge - Desktop */}
@@ -61,9 +63,11 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold">
-                MOTTA <span className="text-gold-500">ONE</span>
-              </span>
+              <img 
+                src="/motta one.webp" 
+                alt="Motta One Logo" 
+                className="h-8 w-auto"
+              />
             </div>
             
             <div className="text-center md:text-left">

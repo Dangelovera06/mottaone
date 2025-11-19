@@ -32,8 +32,11 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+      {/* Subtle gradient accent */}
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-50 to-transparent"></div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

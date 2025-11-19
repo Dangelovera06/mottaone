@@ -3,11 +3,26 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden pt-20">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-black/5 rounded-full blur-3xl"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background Image with Gradient Fade */}
+      <div className="absolute inset-0">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/drive-download-20251119T185717Z-1-001/IMG_2835.JPG)',
+          }}
+        />
+        
+        {/* Gradient Overlay - Fades to White */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-white/95 to-white"></div>
+        
+        {/* Additional Side Gradients for Depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-transparent to-white/80"></div>
+        
+        {/* Gold Accent Gradients */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold-500/10 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-gold-500/5 to-transparent"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -91,26 +106,29 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-              {/* Hero Image */}
+              {/* Secondary Hero Image */}
               <img 
-                src="/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" 
+                src="/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" 
                 alt="Premium stone remodeling work by Motta One"
                 className="w-full h-full object-cover"
               />
               
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              
               {/* Decorative Border */}
-              <div className="absolute inset-0 border-4 border-gold-500/20 rounded-2xl pointer-events-none"></div>
+              <div className="absolute inset-0 border-4 border-gold-500/30 rounded-2xl pointer-events-none"></div>
             </div>
 
-            {/* Floating Card */}
+            {/* Floating Trust Badge */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100"
+              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gold-200"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">

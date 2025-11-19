@@ -26,10 +26,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl"></div>
+    <section id="contact" className="py-20 md:py-32 bg-white relative overflow-hidden">
+      {/* Elegant Gradient Accents */}
+      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-gray-50 to-transparent"></div>
+      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-bl from-gold-500/10 to-transparent"></div>
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-gradient-to-tr from-gold-500/5 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
@@ -61,9 +62,12 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
+            className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 relative overflow-hidden"
           >
-            <div className="mb-6 p-4 bg-gold-50 rounded-lg border border-gold-200">
+            {/* Subtle gradient in form */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-gold-500/5 to-transparent pointer-events-none"></div>
+            
+            <div className="mb-6 p-4 bg-gradient-to-r from-gold-50 to-gold-50/50 rounded-lg border border-gold-200 relative">
               <p className="text-sm font-semibold text-gold-700 text-center">
                 🎉 Special Offer: Free material upgrade on projects booked this month!
               </p>

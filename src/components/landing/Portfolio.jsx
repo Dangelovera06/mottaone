@@ -20,8 +20,12 @@ export default function Portfolio() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="py-20 md:py-32 bg-white relative overflow-hidden">
+      {/* Subtle Background Gradients */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-500/5 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-gray-50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

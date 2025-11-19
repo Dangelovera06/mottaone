@@ -26,8 +26,12 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+      {/* Subtle Gradient Accents */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gray-50 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-gold-500/5 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,9 +72,12 @@ export default function Benefits() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-black rounded-2xl p-8 text-white"
+          className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-8 text-white shadow-2xl relative overflow-hidden"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Gold accent gradient */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-gold-500/10 to-transparent"></div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2">500+</div>
               <div className="text-sm text-gray-400">Projects Completed</div>

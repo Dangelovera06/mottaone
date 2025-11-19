@@ -15,9 +15,6 @@ export default function Landing() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">M</span>
-            </div>
             <span className="text-xl md:text-2xl font-bold tracking-tight text-white">
               MOTTA <span className="text-gold-500">ONE</span>
             </span>
@@ -64,9 +61,6 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
               <span className="text-lg font-bold">
                 MOTTA <span className="text-gold-500">ONE</span>
               </span>

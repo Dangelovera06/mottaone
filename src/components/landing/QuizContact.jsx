@@ -4,32 +4,41 @@ import { motion, AnimatePresence } from "framer-motion";
 const questions = [
   {
     id: 1,
-    question: "What type of project are you planning?",
+    question: "What type of stone project do you need?",
     options: [
-      { value: "kitchen", label: "🍳 Kitchen Remodeling", icon: "kitchen" },
-      { value: "bathroom", label: "🛁 Bathroom Renovation", icon: "bathroom" },
-      { value: "outdoor", label: "🌳 Outdoor Spaces", icon: "outdoor" },
-      { value: "custom", label: "✨ Custom Stonework", icon: "custom" },
+      { value: "countertops", label: "🏠 Countertops" },
+      { value: "backsplash", label: "✨ Backsplash" },
+      { value: "full-remodel", label: "🔨 Full Kitchen/Bath Remodel" },
+      { value: "outdoor", label: "🌳 Outdoor Kitchen/Patio" },
     ]
   },
   {
     id: 2,
-    question: "When are you looking to start?",
+    question: "What material are you interested in?",
     options: [
-      { value: "asap", label: "📅 As soon as possible" },
-      { value: "1-3months", label: "📆 Within 1-3 months" },
-      { value: "3-6months", label: "🗓️ Within 3-6 months" },
-      { value: "planning", label: "💭 Just planning ahead" },
+      { value: "granite", label: "💎 Granite" },
+      { value: "marble", label: "🤍 Marble" },
+      { value: "quartz", label: "✨ Quartz" },
+      { value: "not-sure", label: "🤔 Not sure yet" },
     ]
   },
   {
     id: 3,
-    question: "What's your estimated budget?",
+    question: "When are you looking to start the project?",
     options: [
-      { value: "under10k", label: "💵 Under $10,000" },
-      { value: "10-25k", label: "💰 $10,000 - $25,000" },
-      { value: "25-50k", label: "💎 $25,000 - $50,000" },
-      { value: "50k+", label: "👑 $50,000+" },
+      { value: "immediately", label: "⚡ Immediately" },
+      { value: "1-2weeks", label: "📅 Within 1-2 weeks" },
+      { value: "1month", label: "📆 Within a month" },
+      { value: "planning", label: "💭 Just getting quotes" },
+    ]
+  },
+  {
+    id: 4,
+    question: "Do you already have measurements?",
+    options: [
+      { value: "yes", label: "✅ Yes, I have measurements" },
+      { value: "no", label: "❌ No, I need help with that" },
+      { value: "approximate", label: "📏 I have approximate measurements" },
     ]
   },
 ];
@@ -133,13 +142,13 @@ export default function QuizContact() {
 
         {/* Progress Bar */}
         <div className="mb-8">
-          <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-gray-400">Step {currentStep + 1} of {questions.length + 1}</span>
+          <div className="flex justify-between items-center mb-3">
+            <span className="text-sm text-gray-400">Question {currentStep + 1} of {questions.length}</span>
             <span className="text-sm text-gold-400 font-semibold">{Math.round(progress)}% Complete</span>
           </div>
-          <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+          <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-gold-500 to-gold-600"
+              className="h-full bg-gradient-to-r from-gold-500 to-gold-600 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5 }}
@@ -162,11 +171,11 @@ export default function QuizContact() {
                 transition={{ duration: 0.3 }}
                 className="relative"
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-10 text-center">
                   {questions[currentStep].question}
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
                   {questions[currentStep].options.map((option, index) => (
                     <motion.button
                       key={option.value}
@@ -174,13 +183,13 @@ export default function QuizContact() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       onClick={() => handleAnswer(questions[currentStep].id, option.value)}
-                      className={`p-6 text-left rounded-xl border-2 transition-all duration-300 hover:scale-105 ${
+                      className={`p-5 text-center rounded-xl border-2 transition-all duration-300 hover:scale-102 ${
                         answers[questions[currentStep].id] === option.value
-                          ? 'border-gold-500 bg-gold-500/20'
-                          : 'border-gray-700 bg-gray-800 hover:border-gold-500/50'
+                          ? 'border-gold-500 bg-gold-500/20 shadow-lg shadow-gold-500/20'
+                          : 'border-gray-700 bg-gray-800/50 hover:border-gold-500/50 hover:bg-gray-800'
                       }`}
                     >
-                      <span className="text-lg font-semibold text-white block">
+                      <span className="text-xl font-semibold text-white block">
                         {option.label}
                       </span>
                     </motion.button>

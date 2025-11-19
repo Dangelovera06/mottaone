@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const projects = [
   { id: 1, category: "Kitchens", title: "Modern Kitchen Remodel", description: "Marble countertops & backsplash", image: "/drive-download-20251119T185717Z-1-001/81141859-57bb-4dc3-a7f4-df52821b984f.JPG" },
-  { id: 2, category: "Kitchens", title: "Modern Redesign", description: "Complete kitchen transformation", image: "/drive-download-20251119T185717Z-1-001/modern redesign.JPG" },
+  { id: 2, category: "Kitchens", title: "Modern Redesign", description: "Complete kitchen transformation", image: "/drive-download-20251119T185717Z-1-001/header-image.jpg" },
   { id: 3, category: "Kitchens", title: "Contemporary Kitchen", description: "Quartz island & counters", image: "/drive-download-20251119T185717Z-1-001/IMG_1173.jpg" },
   { id: 4, category: "Custom", title: "Premium Stone Feature", description: "Natural stone installation", image: "/drive-download-20251119T185717Z-1-001/IMG_2835.JPG" },
-  { id: 5, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/accetnt wall.HEIC" },
+  { id: 5, category: "Custom", title: "Accent Wall", description: "Stacked stone feature", image: "/drive-download-20251119T185717Z-1-001/IMG_6994.PNG" },
   { id: 6, category: "Custom", title: "Outdoor Stone Work", description: "Premium outdoor installation", image: "/drive-download-20251119T185717Z-1-001/f8d9b399-67c8-4f36-b656-1234139af034.JPG" },
 ];
 

@@ -9,24 +9,24 @@ import FAQSection from "../components/landing/FAQSection";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen overflow-x-hidden w-full bg-white">
+    <div className="min-h-screen overflow-x-hidden w-full bg-black">
       {/* Sticky CTA Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/95 border-b border-gray-200 shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/95 border-b border-gray-800 shadow-lg">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">M</span>
             </div>
-            <span className="text-xl md:text-2xl font-bold tracking-tight text-black">
+            <span className="text-xl md:text-2xl font-bold tracking-tight text-white">
               MOTTA <span className="text-gold-500">ONE</span>
             </span>
           </div>
 
           {/* Urgency Badge - Desktop */}
-          <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full">
+          <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500 rounded-full">
             <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-red-700">Limited Slots This Month</span>
+            <span className="text-sm font-semibold text-red-400">Limited Slots This Month</span>
           </div>
 
           {/* CTA Button */}

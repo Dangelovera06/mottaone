@@ -24,8 +24,11 @@ const testimonials = [
 
 export default function SocialProof() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+      {/* Gold accent */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-500/10 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,13 +37,13 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-4">
-            <span className="text-sm font-medium text-gold-700">⭐ 5.0 Rating</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/20 border border-gold-500 rounded-full mb-4">
+            <span className="text-sm font-medium text-gold-400">⭐ 5.0 Rating</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Loved by Homeowners & Designers
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-400">
             Join hundreds of satisfied clients
           </p>
         </motion.div>
@@ -54,7 +57,7 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 bg-gray-50 rounded-xl border border-gray-200"
+              className="p-6 bg-gray-900 rounded-xl border border-gray-800 hover:border-gold-500/50 transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -71,7 +74,7 @@ export default function SocialProof() {
               </div>
 
               {/* Quote */}
-              <p className="text-gray-700 leading-relaxed mb-4 italic">
+              <p className="text-gray-300 leading-relaxed mb-4 italic">
                 "{testimonial.text}"
               </p>
 
@@ -81,8 +84,8 @@ export default function SocialProof() {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-semibold text-black">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.role}</div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
               </div>
             </motion.div>
@@ -105,7 +108,7 @@ export default function SocialProof() {
           >
             Get Your Free Quote Today →
           </button>
-          <p className="text-sm text-gray-500 mt-4">✓ No obligation • ✓ Free consultation • ✓ Quick response</p>
+          <p className="text-sm text-gray-400 mt-4">✓ No obligation • ✓ Free consultation • ✓ Quick response</p>
         </motion.div>
       </div>
     </section>

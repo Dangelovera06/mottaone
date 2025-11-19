@@ -32,9 +32,10 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-black relative overflow-hidden">
       {/* Subtle gradient accent */}
-      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-900 to-transparent"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold-500/10 to-transparent"></div>
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
@@ -45,10 +46,10 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-400">
             Got questions? We've got answers.
           </p>
         </motion.div>
@@ -62,13 +63,13 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+              className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden shadow-sm hover:border-gold-500/50 transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
               >
-                <span className="font-semibold text-black text-lg pr-4">
+                <span className="font-semibold text-white text-lg pr-4">
                   {faq.question}
                 </span>
                 <svg
@@ -88,7 +89,7 @@ export default function FAQSection() {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                <div className="px-6 pb-5 text-gray-300 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
@@ -102,19 +103,19 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-12 p-8 bg-gold-50 rounded-2xl border border-gold-200"
+          className="text-center mt-12 p-8 bg-gradient-to-r from-gold-500/20 to-gold-500/10 rounded-2xl border border-gold-500"
         >
-          <h3 className="text-2xl font-bold text-black mb-3">
+          <h3 className="text-2xl font-bold text-white mb-3">
             Still Have Questions?
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-300 mb-6">
             We're here to help! Get in touch and we'll answer all your questions.
           </p>
           <button
             onClick={() => {
               document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }}
-            className="px-8 py-4 bg-black text-white text-base font-bold rounded-lg hover:bg-gold-500 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="px-8 py-4 bg-gold-500 text-white text-base font-bold rounded-lg hover:bg-gold-600 transition-all duration-300 hover:scale-105 shadow-lg"
           >
             Contact Us Now
           </button>

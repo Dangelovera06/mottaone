@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Gradient Fade */}
+      {/* Background Image with Gradient Fade to Black */}
       <div className="absolute inset-0">
         {/* Background Image */}
         <div 
@@ -14,18 +14,18 @@ export default function Hero() {
           }}
         />
         
-        {/* Gradient Overlay - Starts Lower to Show More Image */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent via-40% to-white to-60%"></div>
+        {/* Gradient Overlay - More Image Visible */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent via-50% to-black to-75%"></div>
         
-        {/* Bottom gradient for smooth fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-white via-white/95 to-transparent"></div>
+        {/* Bottom gradient for smooth fade to black */}
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
         
         {/* Side Gradients for Content Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
         
         {/* Gold Accent Gradients */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold-500/10 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-gold-500/5 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-gold-500/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-gold-500/10 to-transparent"></div>
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -38,26 +38,26 @@ export default function Hero() {
             className="space-y-8 max-w-4xl"
           >
             {/* Urgency Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500 rounded-full backdrop-blur-sm">
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-bold text-red-700">⚡ Limited Slots Available</span>
+              <span className="text-sm font-bold text-red-400">⚡ Limited Slots Available</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-black">Premium Stone</span>
+              <span className="text-white drop-shadow-lg">Premium Stone</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-gold-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600 drop-shadow-lg">
                 Remodeling Done Right
               </span>
             </h1>
 
             {/* Value Proposition */}
             <div className="space-y-3">
-              <p className="text-xl md:text-2xl text-black font-semibold">
+              <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg">
                 Get Your Dream Kitchen or Bathroom in Just 1-2 Weeks
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-lg text-gray-300 leading-relaxed max-w-xl drop-shadow-md">
                 Premium materials • Expert craftsmanship • Lifetime warranty
               </p>
             </div>
@@ -70,13 +70,13 @@ export default function Hero() {
                 "Licensed & Insured",
                 "5.0★ Rated"
               ].map((item, index) => (
-                <div key={index} className="flex items-center justify-center gap-3">
+                <div key={index} className="flex items-center justify-center gap-3 backdrop-blur-sm bg-black/20 p-2 rounded-lg">
                   <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-base text-gray-700 font-medium">{item}</span>
+                  <span className="text-base text-white font-medium">{item}</span>
                 </div>
               ))}
             </div>
@@ -101,7 +101,7 @@ export default function Hero() {
               </button>
             </div>
             
-            <p className="text-sm text-gray-500">✓ No obligation • ✓ Response within 24hrs</p>
+            <p className="text-sm text-gray-400">✓ No obligation • ✓ Response within 24hrs</p>
           </motion.div>
         </div>
       </div>

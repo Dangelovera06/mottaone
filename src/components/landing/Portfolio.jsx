@@ -12,10 +12,10 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-20 md:py-32 bg-white relative overflow-hidden">
+    <section id="portfolio" className="py-20 md:py-32 bg-black relative overflow-hidden">
       {/* Subtle Background Gradients */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-500/5 to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-gray-50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-500/10 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-gray-900 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
@@ -26,13 +26,13 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-50 border border-gold-200 rounded-full mb-4">
-            <span className="text-sm font-medium text-gold-700">Recent Projects</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/20 border border-gold-500 rounded-full mb-4">
+            <span className="text-sm font-medium text-gold-400">Recent Projects</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             See What We Can Do For You
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-400">
             Real transformations, real results
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-lg text-gray-700 font-semibold mb-4">
+          <p className="text-lg text-white font-semibold mb-4">
             Your transformation could be next! 👇
           </p>
           <button

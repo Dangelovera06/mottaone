@@ -4,7 +4,7 @@ import Benefits from "../components/landing/Benefits";
 import SocialProof from "../components/landing/SocialProof";
 import Portfolio from "../components/landing/Portfolio";
 import CTASection from "../components/landing/CTASection";
-import Contact from "../components/landing/Contact";
+import QuizContact from "../components/landing/QuizContact";
 import FAQSection from "../components/landing/FAQSection";
 
 export default function Landing() {
@@ -45,7 +45,7 @@ export default function Landing() {
       <SocialProof />
       <Portfolio />
       <CTASection />
-      <Contact />
+      <QuizContact />
       <FAQSection />
 
       {/* Floating CTA Button - Mobile */}

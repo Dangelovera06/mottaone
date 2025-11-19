@@ -1,77 +1,114 @@
 import React from "react";
-import { RainbowButton } from "@/components/ui/rainbow-button";
-
 import Hero from "../components/landing/Hero";
-import PerformanceImage from "../components/landing/PerformanceImage";
-import HardTruth from "../components/landing/HardTruth";
-import WhatHappens from "../components/landing/WhatHappens";
-import EmotionalCore from "../components/landing/EmotionalCore";
-import Blueprint from "../components/landing/Blueprint";
-import FinalClose from "../components/landing/FinalClose";
+import Services from "../components/landing/Services";
+import About from "../components/landing/About";
+import Portfolio from "../components/landing/Portfolio";
+import Process from "../components/landing/Process";
 import Testimonials from "../components/landing/Testimonials";
-import WhatYouGet from "../components/landing/WhatYouGet";
+import Contact from "../components/landing/Contact";
 
 export default function Landing() {
-
   return (
-    <div className="min-h-screen overflow-x-hidden w-full bg-neutral-950">
-      {/* Floating Navigation Header - Visible Throughout Site */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 gap-4">
-          {/* Logo and Name - Left */}
-          <div className="flex items-center gap-1.5">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white">P<span className="text-[#006eff]">1</span> Creative</span>
+    <div className="min-h-screen overflow-x-hidden w-full bg-white">
+      {/* Elegant Navigation Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-gray-200">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-4">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">M</span>
+            </div>
+            <span className="text-xl md:text-2xl font-bold tracking-tight text-black">
+              MOTTA <span className="text-gold-500">ONE</span>
+            </span>
           </div>
 
-          {/* Offer Text - Center */}
-          <div className="hidden md:block text-xs sm:text-sm font-bold tracking-widest text-white/60 uppercase">
-            Limited Spots Available
-          </div>
+          {/* Navigation Links - Desktop */}
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#services" className="text-sm font-medium text-gray-700 hover:text-gold-500 transition-colors">
+              Services
+            </a>
+            <a href="#portfolio" className="text-sm font-medium text-gray-700 hover:text-gold-500 transition-colors">
+              Portfolio
+            </a>
+            <a href="#process" className="text-sm font-medium text-gray-700 hover:text-gold-500 transition-colors">
+              Process
+            </a>
+            <a href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-gold-500 transition-colors">
+              Reviews
+            </a>
+          </nav>
 
-          {/* CTA Button - Right */}
-          <RainbowButton
-            onClick={(e) => {
-              if (window.fbq) {
-                window.fbq('track', 'Lead', {
-                  content_name: 'Header CTA Click',
-                  content_category: 'CTA Button'
-                });
-              }
-              window.open('#', '_blank');
+          {/* CTA Button */}
+          <button
+            onClick={() => {
+              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             }}
-            className="text-sm sm:text-base"
+            className="px-6 py-2.5 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gold-500 transition-all duration-300 hover:scale-105"
           >
-            Apply Now
-          </RainbowButton>
+            Get Quote
+          </button>
         </div>
       </header>
 
       <Hero />
-      <PerformanceImage />
-      <WhatYouGet />
+      <Services />
+      <About />
+      <Portfolio />
+      <Process />
       <Testimonials />
-      <HardTruth />
-      <WhatHappens />
-      <EmotionalCore />
-      <Blueprint />
-      <FinalClose />
+      <Contact />
 
       {/* Footer */}
-      <footer className="py-8 sm:py-12 w-full border-t border-white/10 bg-neutral-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-xl sm:text-2xl mb-3 sm:mb-4 font-display font-bold text-white">
-            P<span className="text-[#006eff]">1</span> Creative
+      <footer className="py-12 w-full border-t border-gray-200 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Company Info */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">M</span>
+                </div>
+                <span className="text-xl font-bold">
+                  MOTTA <span className="text-gold-500">ONE</span>
+                </span>
+              </div>
+              <p className="text-sm text-gray-400">
+                Transforming spaces with premium stone craftsmanship and expert remodeling services.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-sm font-semibold mb-4 text-gold-500">Quick Links</h3>
+              <div className="space-y-2">
+                <a href="#services" className="block text-sm text-gray-400 hover:text-white transition-colors">Services</a>
+                <a href="#portfolio" className="block text-sm text-gray-400 hover:text-white transition-colors">Portfolio</a>
+                <a href="#process" className="block text-sm text-gray-400 hover:text-white transition-colors">Our Process</a>
+                <a href="#testimonials" className="block text-sm text-gray-400 hover:text-white transition-colors">Testimonials</a>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-sm font-semibold mb-4 text-gold-500">Contact</h3>
+              <div className="space-y-2 text-sm text-gray-400">
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@mottaone.com</p>
+                <p>Hours: Mon-Fri 8AM-6PM</p>
+              </div>
+            </div>
           </div>
-          <p className="text-xs sm:text-sm mb-6 sm:mb-8 text-white/60">
-            Turning businesses into lead-generating machines
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
-            <a href="#" className="text-xs sm:text-sm text-white/60 transition-colors hover:text-white">Privacy Policy</a>
-            <a href="#" className="text-xs sm:text-sm text-white/60 transition-colors hover:text-white">Terms of Service</a>
-            <a href="#" className="text-xs sm:text-sm text-white/60 transition-colors hover:text-white">Contact</a>
-          </div>
-          <div className="text-xs uppercase tracking-wider text-white/40">
-            © 2025 P1 Creative. All rights reserved.
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-gray-500">
+              © 2025 Motta One. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </footer>

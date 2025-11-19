@@ -1,122 +1,143 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 
 const testimonials = [
   {
-    text: "P1 Creative took us from inconsistent leads to 45 qualified appointments per month. Their AI caller system alone saves us 20 hours a week. Game-changer.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    name: "Sarah Chen",
-    role: "Med Spa Owner",
+    name: "Sarah Johnson",
+    role: "Homeowner",
+    image: "",
+    rating: 5,
+    text: "Motta One transformed our kitchen beyond our wildest dreams. The marble countertops are absolutely stunning, and their attention to detail was impeccable. Highly recommend!",
   },
   {
-    text: "Within 60 days, P1 filled our calendar with pre-qualified leads. The cinematic videos they produce stop people mid-scroll. Best ROI we've ever seen on marketing.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Marcus Johnson",
-    role: "Commercial Real Estate",
+    name: "Michael Chen",
+    role: "Property Developer",
+    image: "",
+    rating: 5,
+    text: "We've worked with Motta One on multiple properties. Their professionalism, quality of work, and timely delivery are unmatched. They're our go-to for all stone work.",
   },
   {
-    text: "We were spending $15K/month on ads with zero results. P1 Creative rebuilt our entire system and now we're booking 30+ qualified calls monthly. Worth every penny.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
-    name: "Elena Rodriguez",
-    role: "Luxury Home Builder",
+    name: "Jennifer Martinez",
+    role: "Interior Designer",
+    image: "",
+    rating: 5,
+    text: "As a designer, I'm particular about craftsmanship. Motta One consistently delivers exceptional results. Their team is skilled, reliable, and a pleasure to work with.",
   },
   {
-    text: "The AI caller handles our inbound leads 24/7. No more missed calls, no more manual follow-ups. P1 Creative gave us back our time while doubling our bookings.",
-    image: "https://randomuser.me/api/portraits/men/52.jpg",
-    name: "Michael Thompson",
-    role: "HVAC Company Owner",
+    name: "David Thompson",
+    role: "Homeowner",
+    image: "",
+    rating: 5,
+    text: "Our bathroom renovation was flawless. The granite installation is perfect, and the team was respectful of our home. Worth every penny!",
   },
   {
-    text: "P1 Creative's videos are cinematic and their ads actually convert. We went from 5 leads per month to 40+ qualified appointments. Our business has completely transformed.",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    name: "Lisa Martinez",
-    role: "Plastic Surgeon",
+    name: "Lisa Anderson",
+    role: "Restaurant Owner",
+    image: "",
+    rating: 5,
+    text: "Motta One created a stunning stone feature wall for our restaurant. It's become the centerpiece that customers always comment on. Outstanding work!",
   },
   {
-    text: "Their concierge support is unmatched. Weekly KPI reports, biweekly strategy calls, and Slack access whenever we need help. They're truly invested in our success.",
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
-    name: "David Kim",
-    role: "Law Firm Partner",
-  },
-  {
-    text: "P1 Creative built our landing page, launched our ads, and automated our entire follow-up process. We're now closing $200K+ per month from qualified leads they generate.",
-    image: "https://randomuser.me/api/portraits/women/72.jpg",
-    name: "Amanda Foster",
-    role: "Roofing Company CEO",
-  },
-  {
-    text: "We tried three agencies before P1 Creative. None of them delivered. P1 gave us a complete system that actually works—content, ads, booking automation, everything.",
-    image: "https://randomuser.me/api/portraits/men/58.jpg",
-    name: "Jason Park",
-    role: "Dental Practice Owner",
-  },
-  {
-    text: "The custom SOPs they created for our front desk team eliminated all the confusion. Now every lead is handled perfectly and our close rate is 3x what it was.",
-    image: "https://randomuser.me/api/portraits/women/79.jpg",
-    name: "Jennifer Blake",
-    role: "Financial Advisor",
+    name: "Robert Williams",
+    role: "Homeowner",
+    image: "",
+    rating: 5,
+    text: "From consultation to completion, the experience was seamless. Our outdoor kitchen is gorgeous and built to last. Thank you, Motta One!",
   },
 ];
 
-const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
-
 export default function Testimonials() {
   return (
-    <section className="bg-[#030303] py-20 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#006eff]/[0.03] via-transparent to-[#0050cc]/[0.03]" />
+    <section id="testimonials" className="py-20 md:py-32 bg-black text-white relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
 
-      <div className="container z-10 mx-auto px-4 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="flex flex-col items-center justify-center max-w-[640px] mx-auto"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.02] py-2 px-4 rounded-full backdrop-blur-sm">
-              <div className="w-2 h-2 rounded-full bg-[#006eff]"></div>
-              <span className="text-sm text-white/60 tracking-wide">Success Stories</span>
-            </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/20 border border-gold-500/30 rounded-full mb-6">
+            <span className="text-sm font-medium text-gold-400">Testimonials</span>
           </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
-              Real Businesses.
-            </span>
-            <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-              Real Results.
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            What Our Clients Say
           </h2>
-          
-          <p className="text-center text-base md:text-lg text-white/50 leading-relaxed">
-            See what business owners are saying about their transformation
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Don't just take our word for it—hear from those who've experienced the Motta One difference
           </p>
         </motion.div>
 
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-gold-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-gold-500/10"
+            >
+              {/* Stars */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 text-gold-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-gray-300 leading-relaxed mb-6">
+                "{testimonial.text}"
+              </p>
+
+              {/* Author */}
+              <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-white font-bold text-lg">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="flex justify-center gap-6 mt-16 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[740px] overflow-hidden"
+          transition={{ duration: 0.6 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn 
-            testimonials={secondColumn} 
-            className="hidden md:block" 
-            duration={19} 
-          />
-          <TestimonialsColumn 
-            testimonials={thirdColumn} 
-            className="hidden lg:block" 
-            duration={17} 
-          />
+          {[
+            { number: "500+", label: "Projects Completed" },
+            { number: "98%", label: "Satisfaction Rate" },
+            { number: "15+", label: "Years Experience" },
+            { number: "5★", label: "Average Rating" },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2">
+                {stat.number}
+              </div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

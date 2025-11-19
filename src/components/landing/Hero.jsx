@@ -35,7 +35,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8 max-w-4xl"
+            className="space-y-8 max-w-4xl p-8 md:p-12 rounded-3xl bg-black/40 backdrop-blur-md shadow-2xl border border-white/10"
           >
             {/* Urgency Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500 rounded-full backdrop-blur-sm">

@@ -5,42 +5,42 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Homeowner",
-    image: "",
+    image: "/SOCIAL PROOF/3 copy.png",
     rating: 5,
     text: "Motta One transformed our kitchen beyond our wildest dreams. The marble countertops are absolutely stunning, and their attention to detail was impeccable. Highly recommend!",
   },
   {
     name: "Michael Chen",
     role: "Property Developer",
-    image: "",
+    image: "/SOCIAL PROOF/4 copy.png",
     rating: 5,
     text: "We've worked with Motta One on multiple properties. Their professionalism, quality of work, and timely delivery are unmatched. They're our go-to for all stone work.",
   },
   {
     name: "Jennifer Martinez",
     role: "Interior Designer",
-    image: "",
+    image: "/SOCIAL PROOF/5 copy.png",
     rating: 5,
     text: "As a designer, I'm particular about craftsmanship. Motta One consistently delivers exceptional results. Their team is skilled, reliable, and a pleasure to work with.",
   },
   {
     name: "David Thompson",
     role: "Homeowner",
-    image: "",
+    image: "/SOCIAL PROOF/6 copy.png",
     rating: 5,
     text: "Our bathroom renovation was flawless. The granite installation is perfect, and the team was respectful of our home. Worth every penny!",
   },
   {
     name: "Lisa Anderson",
     role: "Restaurant Owner",
-    image: "",
+    image: "/SOCIAL PROOF/3 copy.png",
     rating: 5,
     text: "Motta One created a stunning stone feature wall for our restaurant. It's become the centerpiece that customers always comment on. Outstanding work!",
   },
   {
     name: "Robert Williams",
     role: "Homeowner",
-    image: "",
+    image: "/SOCIAL PROOF/4 copy.png",
     rating: 5,
     text: "From consultation to completion, the experience was seamless. Our outdoor kitchen is gorgeous and built to last. Thank you, Motta One!",
   },
@@ -105,9 +105,17 @@ export default function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-white font-bold text-lg">
-                  {testimonial.name.charAt(0)}
-                </div>
+                {testimonial.image ? (
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-gold-500"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-white font-bold text-lg">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                )}
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>

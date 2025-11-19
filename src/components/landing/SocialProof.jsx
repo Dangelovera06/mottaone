@@ -5,21 +5,18 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Homeowner",
-    image: "/SOCIAL PROOF/3 copy.png",
     rating: 5,
     text: "Best investment we made in our home. The kitchen looks like it belongs in a magazine!",
   },
   {
     name: "Michael Chen",
     role: "Property Developer",
-    image: "/SOCIAL PROOF/4 copy.png",
     rating: 5,
     text: "We use Motta One for all our properties. Quality and reliability every single time.",
   },
   {
     name: "Jennifer Martinez",
     role: "Interior Designer",
-    image: "/SOCIAL PROOF/5 copy.png",
     rating: 5,
     text: "Impeccable craftsmanship. I recommend them to all my clients without hesitation.",
   },
@@ -80,11 +77,9 @@ export default function SocialProof() {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-gold-500"
-                />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                  {testimonial.name.charAt(0)}
+                </div>
                 <div>
                   <div className="font-semibold text-black">{testimonial.name}</div>
                   <div className="text-sm text-gray-500">{testimonial.role}</div>

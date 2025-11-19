@@ -17,7 +17,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-8 text-center lg:text-left"
           >
             {/* Urgency Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full">
@@ -45,14 +45,14 @@ export default function Hero() {
             </div>
 
             {/* Benefits Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 max-w-xl mx-auto lg:mx-0">
               {[
                 "Free In-Home Consultation",
                 "Best Price Guarantee",
                 "Licensed & Insured",
                 "5.0★ Rated"
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
+                <div key={index} className="flex items-center justify-center lg:justify-start gap-3">
                   <div className="w-6 h-6 bg-gold-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center lg:justify-start">
               <button
                 onClick={() => {
                   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
@@ -83,7 +83,7 @@ export default function Hero() {
               </button>
             </div>
             
-            <p className="text-sm text-gray-500">✓ No obligation • ✓ Response within 24hrs</p>
+            <p className="text-sm text-gray-500 text-center lg:text-left">✓ No obligation • ✓ Response within 24hrs</p>
           </motion.div>
 
           {/* Right Image */}

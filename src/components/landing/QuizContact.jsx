@@ -6,39 +6,39 @@ const questions = [
     id: 1,
     question: "What type of stone project do you need?",
     options: [
-      { value: "countertops", label: "🏠 Countertops" },
-      { value: "backsplash", label: "✨ Backsplash" },
-      { value: "full-remodel", label: "🔨 Full Kitchen/Bath Remodel" },
-      { value: "outdoor", label: "🌳 Outdoor Kitchen/Patio" },
+      { value: "countertops", label: "Countertops" },
+      { value: "backsplash", label: "Backsplash" },
+      { value: "full-remodel", label: "Full Kitchen/Bath Remodel" },
+      { value: "outdoor", label: "Outdoor Kitchen/Patio" },
     ]
   },
   {
     id: 2,
     question: "What material are you interested in?",
     options: [
-      { value: "granite", label: "💎 Granite" },
-      { value: "marble", label: "🤍 Marble" },
-      { value: "quartz", label: "✨ Quartz" },
-      { value: "not-sure", label: "🤔 Not sure yet" },
+      { value: "granite", label: "Granite" },
+      { value: "marble", label: "Marble" },
+      { value: "quartz", label: "Quartz" },
+      { value: "not-sure", label: "Not sure yet" },
     ]
   },
   {
     id: 3,
     question: "When are you looking to start the project?",
     options: [
-      { value: "immediately", label: "⚡ Immediately" },
-      { value: "1-2weeks", label: "📅 Within 1-2 weeks" },
-      { value: "1month", label: "📆 Within a month" },
-      { value: "planning", label: "💭 Just getting quotes" },
+      { value: "immediately", label: "Immediately" },
+      { value: "1-2weeks", label: "Within 1-2 weeks" },
+      { value: "1month", label: "Within a month" },
+      { value: "planning", label: "Just getting quotes" },
     ]
   },
   {
     id: 4,
     question: "Do you already have measurements?",
     options: [
-      { value: "yes", label: "✅ Yes, I have measurements" },
-      { value: "no", label: "❌ No, I need help with that" },
-      { value: "approximate", label: "📏 I have approximate measurements" },
+      { value: "yes", label: "Yes, I have measurements" },
+      { value: "no", label: "No, I need help with that" },
+      { value: "approximate", label: "I have approximate measurements" },
     ]
   },
 ];
@@ -101,7 +101,7 @@ export default function QuizContact() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">Thank You! 🎉</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Thank You!</h2>
             <p className="text-xl text-gray-300 mb-2">
               We'll contact you within <span className="text-gold-400 font-bold">24 hours</span>
             </p>
@@ -130,7 +130,7 @@ export default function QuizContact() {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/20 border border-gold-500 rounded-full mb-4">
-            <span className="text-sm font-bold text-gold-400">📞 Get Your Free Quote</span>
+            <span className="text-sm font-bold text-gold-400">Get Your Free Quote</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Let's Find Your Perfect Solution
@@ -219,7 +219,7 @@ export default function QuizContact() {
               >
                 <div className="mb-6 p-4 bg-gradient-to-r from-gold-500/20 to-gold-500/10 rounded-lg border border-gold-500">
                   <p className="text-sm font-semibold text-gold-400 text-center">
-                    🎉 Almost there! Just need your contact info to send your personalized quote
+                    Almost there! Just need your contact info to send your personalized quote
                   </p>
                 </div>
 

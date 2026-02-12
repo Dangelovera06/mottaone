@@ -39,13 +39,13 @@ export default function QuizModal({ isOpen, onClose }) {
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white border-2 border-gray-200 shadow-2xl"
+              className="relative w-full max-w-6xl max-h-[95vh] overflow-y-auto bg-white border-2 border-gray-200 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -59,13 +59,13 @@ export default function QuizModal({ isOpen, onClose }) {
               </button>
 
               {/* Content */}
-              <div className="p-8 md:p-12">
-                <div className="mb-8">
-                  <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600 mb-6"></div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">
+              <div className="p-6 md:p-10">
+                <div className="mb-6">
+                  <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600 mb-4"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-black mb-2 tracking-tight">
                     Get Your Free Quote
                   </h2>
-                  <p className="text-xl text-gray-600">
+                  <p className="text-lg text-gray-600">
                     Quick answers for a personalized estimate
                   </p>
                 </div>
@@ -74,8 +74,8 @@ export default function QuizModal({ isOpen, onClose }) {
                 <div className="bg-white">
                   <iframe 
                     src="https://api.leadconnectorhq.com/widget/quiz/cGpUVPZJJytrRprRUM83" 
-                    style={{ border: 'none', width: '100%', minHeight: '600px' }} 
-                    scrolling="no" 
+                    style={{ border: 'none', width: '100%', minHeight: '800px', height: '80vh' }} 
+                    scrolling="yes" 
                     id="cGpUVPZJJytrRprRUM83" 
                     title="Get Your Free Quote"
                   />

@@ -3,131 +3,86 @@ import { motion } from "framer-motion";
 
 export default function HeroNew() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/drive-download-20251119T185717Z-1-001/header-image.jpg)',
-          }}
-        />
-        
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
-      </div>
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center space-y-8"
-        >
-          {/* Badge */}
+    <section className="relative min-h-screen bg-white pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-block"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <div className="px-4 py-2 bg-gold-500/20 border border-gold-500/50 rounded-full backdrop-blur-sm">
-              <span className="text-sm font-semibold text-gold-400 uppercase tracking-wider">
-                Premium Stone Specialists
-              </span>
+            <div className="space-y-6">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-none tracking-tighter">
+                Luxury Stone
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-700 via-gray-900 to-black">
+                  Remodeling
+                </span>
+              </h1>
+              
+              <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600"></div>
+              
+              <p className="text-2xl text-gray-600 leading-relaxed max-w-lg">
+                Transform your home with expert stone craftsmanship
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={() => {
+                  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-8 py-4 bg-black text-white text-lg font-semibold rounded-none hover:bg-gray-900 transition-all duration-300"
+              >
+                Request Quote
+              </button>
+              <button
+                onClick={() => {
+                  document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-8 py-4 bg-white text-black text-lg font-semibold border-2 border-black rounded-none hover:bg-gray-50 transition-all duration-300"
+              >
+                View Projects
+              </button>
+            </div>
+
+            {/* Stats */}
+            <div className="flex gap-12 pt-8 border-t border-gray-200">
+              {[
+                { value: "15+", label: "Years" },
+                { value: "500+", label: "Projects" },
+                { value: "5.0", label: "Rating" },
+              ].map((stat, index) => (
+                <div key={index}>
+                  <div className="text-4xl font-bold text-black">{stat.value}</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wider">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-tight tracking-tight"
-          >
-            Transform Your Space
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">
-              With Stone Perfection
-            </span>
-          </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
-          >
-            Expert stone remodeling for kitchens, bathrooms, and more.
-            <br className="hidden md:block" />
-            15+ years of craftsmanship. Lifetime warranty.
-          </motion.p>
-
-          {/* CTA Buttons */}
+          {/* Right Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
           >
-            <button
-              onClick={() => {
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="w-full sm:w-auto px-10 py-5 bg-gold-500 text-black text-lg font-bold rounded-lg hover:bg-gold-400 transition-all duration-300 hover:scale-105 shadow-2xl"
-            >
-              Get Free Quote
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              View Our Work
-            </button>
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <img
+                src="/drive-download-20251119T185717Z-1-001/header-image.jpg"
+                alt="Motta One Stone Work"
+                className="w-full h-full object-cover"
+              />
+              
+              {/* Gold accent bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-gold-500 to-gold-600"></div>
+            </div>
           </motion.div>
-
-          {/* Trust Badges */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-8 pt-8"
-          >
-            {[
-              { number: "500+", label: "Projects" },
-              { number: "15+", label: "Years" },
-              { number: "98%", label: "Satisfaction" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-gold-500">{stat.number}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
+        </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="text-gold-500"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

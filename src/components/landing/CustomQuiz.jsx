@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function CustomQuiz({ onClose }) {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
+    location: "",
     projectType: "",
-    projectSize: "",
     timeline: "",
     budget: "",
     name: "",
@@ -40,30 +40,38 @@ export default function CustomQuiz({ onClose }) {
     setError("");
 
     try {
+      const webhookData = {
+        full_name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        location: formData.location,
+        project_type: formData.projectType,
+        timeline: formData.timeline,
+        budget: formData.budget,
+        additional_info: formData.additionalInfo,
+        source: "Motta One Website Quiz"
+      };
+
+      console.log('Sending to webhook:', webhookData);
+
       const response = await fetch('https://services.leadconnectorhq.com/hooks/MB62qwBFPF92bXH86fGG/webhook-trigger/1e331a57-dac0-4cee-a7d5-6b9c87d80dae', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          projectType: formData.projectType,
-          projectSize: formData.projectSize,
-          timeline: formData.timeline,
-          budget: formData.budget,
-          additionalInfo: formData.additionalInfo,
-          source: "Motta One Website Quiz"
-        })
+        body: JSON.stringify(webhookData)
       });
 
-      if (response.ok) {
+      const result = await response.json();
+      console.log('Webhook response:', result);
+
+      if (response.ok || response.status === 200) {
         setIsSuccess(true);
       } else {
         throw new Error('Submission failed');
       }
     } catch (err) {
+      console.error('Submission error:', err);
       setError("Something went wrong. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
@@ -73,9 +81,9 @@ export default function CustomQuiz({ onClose }) {
   const canProceed = () => {
     switch (currentStep) {
       case 1:
-        return formData.projectType !== "";
+        return formData.location !== "";
       case 2:
-        return formData.projectSize !== "";
+        return formData.projectType !== "";
       case 3:
         return formData.timeline !== "";
       case 4:
@@ -144,6 +152,33 @@ export default function CustomQuiz({ onClose }) {
             {currentStep === 1 && (
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                  Are you located in South Florida?
+                </h2>
+                <p className="text-gray-600 mb-8">We currently serve customers in South Florida only</p>
+                <div className="grid grid-cols-1 gap-4 max-w-xl">
+                  {[
+                    { label: "Yes, I'm in South Florida", value: "yes" },
+                    { label: "No, I'm outside South Florida", value: "no" }
+                  ].map((option) => (
+                    <button
+                      key={option.value}
+                      onClick={() => updateField("location", option.value)}
+                      className={`p-6 text-left border-2 transition-all ${
+                        formData.location === option.value
+                          ? "border-gold-500 bg-gold-50"
+                          : "border-gray-200 hover:border-gray-300"
+                      }`}
+                    >
+                      <span className="text-lg font-semibold text-black">{option.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {currentStep === 2 && (
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                   What type of project are you interested in?
                 </h2>
                 <p className="text-gray-600 mb-8">Select the option that best describes your project</p>
@@ -167,36 +202,6 @@ export default function CustomQuiz({ onClose }) {
                       }`}
                     >
                       <span className="text-lg font-semibold text-black">{option}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {currentStep === 2 && (
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-                  What's the size of your project?
-                </h2>
-                <p className="text-gray-600 mb-8">This helps us provide an accurate estimate</p>
-                <div className="grid grid-cols-1 gap-4">
-                  {[
-                    { label: "Small (under 30 sq ft)", value: "small" },
-                    { label: "Medium (30-60 sq ft)", value: "medium" },
-                    { label: "Large (60-100 sq ft)", value: "large" },
-                    { label: "Extra Large (100+ sq ft)", value: "xlarge" },
-                    { label: "Not sure", value: "unsure" }
-                  ].map((option) => (
-                    <button
-                      key={option.value}
-                      onClick={() => updateField("projectSize", option.value)}
-                      className={`p-6 text-left border-2 transition-all ${
-                        formData.projectSize === option.value
-                          ? "border-gold-500 bg-gold-50"
-                          : "border-gray-200 hover:border-gray-300"
-                      }`}
-                    >
-                      <span className="text-lg font-semibold text-black">{option.label}</span>
                     </button>
                   ))}
                 </div>

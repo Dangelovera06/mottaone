@@ -97,4 +97,14 @@ h1, h2, h3, h4, h5, h6 {
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gold-600;
   }
+
+  /* Shimmer animation for glowing CTAs */
+  @keyframes shimmer-slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer-slide 3s infinite;
+  }
 }

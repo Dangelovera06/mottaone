@@ -1,6 +1,7 @@
 import React from "react";
 import HeroNew from "../components/landing/HeroNew";
 import WhyChooseUs from "../components/landing/WhyChooseUs";
+import CTAGlow from "../components/landing/CTAGlow";
 import PortfolioShowcase from "../components/landing/PortfolioShowcase";
 import ProcessSimple from "../components/landing/ProcessSimple";
 import QuizContact from "../components/landing/QuizContact";
@@ -30,8 +31,11 @@ export default function LandingNew() {
 
       <HeroNew />
       <WhyChooseUs />
+      <CTAGlow variant={1} />
       <PortfolioShowcase />
+      <CTAGlow variant={2} />
       <ProcessSimple />
+      <CTAGlow variant={3} />
       <QuizContact />
 
       {/* Footer */}

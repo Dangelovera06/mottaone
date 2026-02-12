@@ -17,7 +17,7 @@ export default function LandingNew() {
       {/* Quiz Modal */}
       <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />
       {/* Minimal Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+      <header className={`fixed top-0 left-0 right-0 bg-white border-b border-gray-200 transition-all duration-300 ${isQuizOpen ? 'z-10' : 'z-50'}`}>
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-4">
           <img 
             src="/motta one.webp" 

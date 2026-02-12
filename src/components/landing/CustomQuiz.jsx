@@ -40,16 +40,42 @@ export default function CustomQuiz({ onClose }) {
     setError("");
 
     try {
+      // Split name into first and last
+      const nameParts = formData.name.trim().split(' ');
+      const firstName = nameParts[0] || '';
+      const lastName = nameParts.slice(1).join(' ') || '';
+
+      // Try multiple field naming conventions that GHL might expect
       const webhookData = {
+        // Name variations
+        name: formData.name,
         full_name: formData.name,
+        fullName: formData.name,
+        firstName: firstName,
+        lastName: lastName,
+        first_name: firstName,
+        last_name: lastName,
+        
+        // Contact info
         email: formData.email,
         phone: formData.phone,
+        
+        // Custom fields
         location: formData.location,
+        projectType: formData.projectType,
         project_type: formData.projectType,
         timeline: formData.timeline,
         budget: formData.budget,
+        notes: formData.additionalInfo,
+        additionalInfo: formData.additionalInfo,
         additional_info: formData.additionalInfo,
-        source: "Motta One Website Quiz"
+        
+        // Source tracking
+        source: "Motta One Website Quiz",
+        
+        // Additional fields that might help
+        tags: ["Website Lead", "Quiz"],
+        type: "lead"
       };
 
       console.log('Sending to webhook:', webhookData);
@@ -64,6 +90,7 @@ export default function CustomQuiz({ onClose }) {
 
       const result = await response.json();
       console.log('Webhook response:', result);
+      console.log('Response status:', response.status);
 
       if (response.ok || response.status === 200) {
         setIsSuccess(true);

@@ -1,12 +1,12 @@
 import Layout from "./Layout.jsx";
 
-import Landing from "./Landing";
+import LandingNew from "./LandingNew";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
     
-    Landing: Landing,
+    Landing: LandingNew,
     
 }
 
@@ -32,10 +32,10 @@ function PagesContent() {
         <Layout currentPageName={currentPage}>
             <Routes>            
                 
-                    <Route path="/" element={<Landing />} />
+                    <Route path="/" element={<LandingNew />} />
                 
                 
-                <Route path="/Landing" element={<Landing />} />
+                <Route path="/Landing" element={<LandingNew />} />
                 
             </Routes>
         </Layout>

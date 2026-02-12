@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function CustomQuiz({ onClose }) {
   const [currentStep, setCurrentStep] = useState(1);
+
+  // Track quiz start on mount
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        content_name: 'Quiz Started',
+        content_category: 'Quote Form'
+      });
+    }
+  }, []);
   const [formData, setFormData] = useState({
     location: "",
     projectType: "",
@@ -26,6 +36,15 @@ export default function CustomQuiz({ onClose }) {
   const nextStep = () => {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
+      
+      // Track step completion
+      if (window.fbq) {
+        window.fbq('track', 'CustomizeProduct', {
+          content_name: `Quiz Step ${currentStep + 1}`,
+          content_category: 'Quote Form',
+          step: currentStep + 1
+        });
+      }
     }
   };
 
@@ -93,6 +112,19 @@ export default function CustomQuiz({ onClose }) {
       console.log('Response status:', response.status);
 
       if (response.ok || response.status === 200) {
+        // Track successful lead submission to Meta
+        if (window.fbq) {
+          window.fbq('track', 'Lead', {
+            content_name: 'Quote Request Submitted',
+            content_category: 'Quote Form',
+            value: 0,
+            currency: 'USD',
+            location: formData.location,
+            project_type: formData.projectType,
+            budget: formData.budget
+          });
+        }
+        
         setIsSuccess(true);
       } else {
         throw new Error('Submission failed');

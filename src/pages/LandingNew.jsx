@@ -9,7 +9,17 @@ import QuizModal from "../components/landing/QuizModal";
 export default function LandingNew() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
 
-  const openQuiz = () => setIsQuizOpen(true);
+  const openQuiz = () => {
+    setIsQuizOpen(true);
+    
+    // Track CTA click
+    if (window.fbq) {
+      window.fbq('track', 'Contact', {
+        content_name: 'Get Quote Button Clicked',
+        content_category: 'CTA'
+      });
+    }
+  };
   const closeQuiz = () => setIsQuizOpen(false);
 
   return (

@@ -58,15 +58,8 @@ export default function QuizModal({ isOpen, onClose }) {
                 </svg>
               </button>
 
-              {/* Compact Header */}
-              <div className="flex-shrink-0 px-4 pt-4 pb-2 border-b border-gray-200">
-                <h2 className="text-2xl font-bold text-black tracking-tight">
-                  Get Your Free Quote
-                </h2>
-              </div>
-
               {/* Embedded Quiz - Full Height */}
-              <div className="flex-1 overflow-hidden">
+              <div className="w-full h-full">
                 <iframe 
                   src="https://api.leadconnectorhq.com/widget/quiz/cGpUVPZJJytrRprRUM83" 
                   style={{ border: 'none', width: '100%', height: '100%' }} 

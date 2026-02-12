@@ -40,7 +40,7 @@ const projects = [
   },
 ];
 
-export default function PortfolioShowcase() {
+export default function PortfolioShowcase({ openQuiz }) {
   return (
     <section id="portfolio" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,9 +100,7 @@ export default function PortfolioShowcase() {
           className="text-center mt-20"
         >
           <button
-            onClick={() => {
-              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={openQuiz}
             className="px-10 py-5 bg-black text-white text-lg font-semibold rounded-none hover:bg-gray-900 transition-all duration-300"
           >
             Start Your Project

@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroNew from "../components/landing/HeroNew";
 import WhyChooseUs from "../components/landing/WhyChooseUs";
 import CTAGlow from "../components/landing/CTAGlow";
 import PortfolioShowcase from "../components/landing/PortfolioShowcase";
 import ProcessSimple from "../components/landing/ProcessSimple";
-import QuizContact from "../components/landing/QuizContact";
+import QuizModal from "../components/landing/QuizModal";
 
 export default function LandingNew() {
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
+
+  const openQuiz = () => setIsQuizOpen(true);
+  const closeQuiz = () => setIsQuizOpen(false);
+
   return (
     <div className="min-h-screen overflow-x-hidden w-full bg-white">
+      {/* Quiz Modal */}
+      <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />
       {/* Minimal Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-4">
@@ -19,9 +26,7 @@ export default function LandingNew() {
           />
           
           <button
-            onClick={() => {
-              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={openQuiz}
             className="px-6 py-3 bg-black text-white text-sm font-semibold rounded-none hover:bg-gray-900 transition-colors duration-300"
           >
             Get Quote
@@ -29,14 +34,13 @@ export default function LandingNew() {
         </div>
       </header>
 
-      <HeroNew />
+      <HeroNew openQuiz={openQuiz} />
       <WhyChooseUs />
-      <CTAGlow variant={1} />
-      <PortfolioShowcase />
-      <CTAGlow variant={2} />
+      <CTAGlow variant={1} openQuiz={openQuiz} />
+      <PortfolioShowcase openQuiz={openQuiz} />
+      <CTAGlow variant={2} openQuiz={openQuiz} />
       <ProcessSimple />
-      <CTAGlow variant={3} />
-      <QuizContact />
+      <CTAGlow variant={3} openQuiz={openQuiz} />
 
       {/* Footer */}
       <footer className="py-12 bg-white border-t border-gray-200">

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function HeroNew() {
+export default function HeroNew({ openQuiz }) {
   return (
     <section className="relative min-h-screen bg-white pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -31,9 +31,7 @@ export default function HeroNew() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => {
-                  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={openQuiz}
                 className="px-8 py-4 bg-black text-white text-lg font-semibold rounded-none hover:bg-gray-900 transition-all duration-300"
               >
                 Request Quote

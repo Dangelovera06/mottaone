@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function CTAGlow({ variant = 1 }) {
+export default function CTAGlow({ variant = 1, openQuiz }) {
   const variants = {
     1: {
       title: "Ready to Transform Your Space?",
@@ -64,9 +64,7 @@ export default function CTAGlow({ variant = 1 }) {
 
               {/* Glowing Button */}
               <motion.button
-                onClick={() => {
-                  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={openQuiz}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`relative px-12 py-5 ${

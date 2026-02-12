@@ -17,29 +17,28 @@ export default function CTASection() {
           className="text-center"
         >
           {/* Urgency Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full mb-6">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-red-300">Only 3 Slots Available This Month</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500/20 border border-gold-500 rounded-full mb-6">
+            <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-semibold text-gold-400 uppercase tracking-wide">Limited Availability This Month</span>
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get a <span className="text-gold-500 font-bold">FREE consultation</span> and detailed quote within 24 hours. 
-            No pressure, just expert advice.
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Get a <span className="text-gold-400 font-bold">complimentary consultation</span> and detailed quote within 24 hours.
           </p>
 
           {/* Benefits List */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-3xl mx-auto">
             {[
-              { icon: "📞", text: "Free In-Home Consultation" },
-              { icon: "💵", text: "Price Match Guarantee" },
-              { icon: "⚡", text: "Fast Project Start" }
+              { text: "Free In-Home Consultation" },
+              { text: "Price Match Guarantee" },
+              { text: "Fast Project Start" }
             ].map((item, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 p-4 bg-white/5 rounded-lg border border-white/10">
-                <span className="text-3xl">{item.icon}</span>
+              <div key={index} className="flex items-center justify-center gap-3 p-5 bg-white/5 rounded-lg border border-white/10 hover:border-gold-500/50 transition-all duration-300">
+                <div className="w-2 h-2 bg-gold-500 rounded-full"></div>
                 <span className="text-sm font-medium">{item.text}</span>
               </div>
             ))}
@@ -56,7 +55,7 @@ export default function CTASection() {
           </button>
 
           <p className="text-sm text-gray-400">
-            ✓ Response in 24 hours or less • ✓ Licensed & Insured • ✓ Lifetime Warranty
+            Response in 24 hours or less • Licensed & Insured • Lifetime Warranty
           </p>
 
           {/* Trust Indicators */}

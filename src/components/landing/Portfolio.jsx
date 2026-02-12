@@ -26,14 +26,14 @@ export default function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/20 border border-gold-500 rounded-full mb-4">
-            <span className="text-sm font-medium text-gold-400">Recent Projects</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500/20 border border-gold-500 rounded-full mb-6">
+            <span className="text-sm font-medium text-gold-400 uppercase tracking-wide">Recent Projects</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            See What We Can Do For You
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            Our Work Speaks For Itself
           </h2>
-          <p className="text-lg text-gray-400">
-            Real transformations, real results
+          <p className="text-xl text-gray-400 leading-relaxed">
+            Real transformations, exceptional results
           </p>
         </motion.div>
 
@@ -86,7 +86,7 @@ export default function Portfolio() {
           className="text-center mt-12"
         >
           <p className="text-lg text-white font-semibold mb-4">
-            Your transformation could be next! 👇
+            Your transformation could be next
           </p>
           <button
             onClick={() => {

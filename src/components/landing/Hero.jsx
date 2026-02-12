@@ -38,24 +38,26 @@ export default function Hero() {
             className="space-y-8 max-w-4xl"
           >
             {/* Urgency Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500 rounded-full backdrop-blur-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-bold text-red-400">⚡ Limited Slots Available</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500/20 border border-gold-500 rounded-full backdrop-blur-sm">
+              <div className="w-2 h-2 bg-gold-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-bold text-gold-400 uppercase tracking-wide">Limited Availability</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-              Premium Stone
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white tracking-tight">
+              Premium Stone Remodeling
               <br />
-              Remodeling Done Right
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">
+                Done Right
+              </span>
             </h1>
 
             {/* Value Proposition */}
-            <div className="space-y-3">
-              <p className="text-xl md:text-2xl text-white font-semibold">
-                Get Your Dream Kitchen or Bathroom in Just 1-2 Weeks
+            <div className="space-y-4">
+              <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed">
+                Transform Your Kitchen or Bathroom in 1-2 Weeks
               </p>
-              <p className="text-lg text-white leading-relaxed max-w-xl">
+              <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
                 Premium materials • Expert craftsmanship • Lifetime warranty
               </p>
             </div>
@@ -99,7 +101,7 @@ export default function Hero() {
               </button>
             </div>
             
-            <p className="text-sm text-gray-400">✓ No obligation • ✓ Response within 24hrs</p>
+            <p className="text-sm text-gray-400">No obligation • Response within 24 hours</p>
           </motion.div>
         </div>
       </div>

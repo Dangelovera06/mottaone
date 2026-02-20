@@ -34,6 +34,7 @@ export default function LandingNew() {
             src="/motta-one-logo.png" 
             alt="Motta One" 
             className="h-10 md:h-14 w-auto"
+            style={{ filter: 'invert(1) brightness(0)' }}
           />
           
           <button
@@ -62,6 +63,7 @@ export default function LandingNew() {
               src="/motta-one-logo.png" 
               alt="Motta One" 
               className="h-8 w-auto"
+              style={{ filter: 'invert(1) brightness(0)' }}
             />
             
             <div className="text-center md:text-left">

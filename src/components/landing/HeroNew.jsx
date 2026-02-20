@@ -13,29 +13,18 @@ export default function HeroNew({ openQuiz }) {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            {/* Urgency Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="inline-block"
-            >
-              <div className="px-4 py-2 bg-red-500 text-white text-sm font-bold uppercase tracking-wide inline-block">
-                Limited Slots Available This Month
-              </div>
-            </motion.div>
-
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight tracking-tight">
-              Get Your Dream Kitchen in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-600">
-                5 Days!
+              Premium Stone
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">
+                Remodeling
               </span>
             </h1>
             
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-green-600"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-700"></div>
             
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              Premium stone countertops installed fast. No mess, no stress, just beautiful results.
+              Transform your kitchen or bathroom with expert craftsmanship. Premium quality, professional results.
             </p>
 
             {/* Social Proof - Profile Pics */}
@@ -70,7 +59,7 @@ export default function HeroNew({ openQuiz }) {
               <div>
                 <div className="flex items-center gap-1 mb-1">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
@@ -81,37 +70,36 @@ export default function HeroNew({ openQuiz }) {
               </div>
             </div>
 
-            {/* Benefits Checklist */}
-            <div className="space-y-3">
-              {[
-                "Free in-home consultation & quote",
-                "Professional installation in just 5 days",
-                "Lifetime warranty on all work",
-                "Licensed & insured contractors"
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-green-500 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-base md:text-lg text-gray-800 font-medium">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div className="pt-4">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={openQuiz}
-                className="px-10 py-5 bg-gradient-to-r from-green-500 to-green-600 text-white text-xl font-bold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
-                style={{
-                  boxShadow: '0 0 40px rgba(34, 197, 94, 0.6), 0 0 80px rgba(34, 197, 94, 0.3)'
-                }}
+                className="px-10 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white text-lg font-bold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Get Your Free Quote Now
+                Get Free Quote
               </button>
-              <p className="text-sm text-gray-500 mt-3">No obligation • Response within 24 hours</p>
+              <button
+                onClick={() => {
+                  document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-10 py-4 bg-white text-black text-lg font-semibold border-2 border-black hover:bg-gray-50 transition-all duration-300"
+              >
+                View Projects
+              </button>
+            </div>
+
+            {/* Stats */}
+            <div className="flex gap-12 pt-8 border-t border-gray-200">
+              {[
+                { value: "15+", label: "Years" },
+                { value: "1000+", label: "Projects" },
+                { value: "5.0", label: "Rating" },
+              ].map((stat, index) => (
+                <div key={index}>
+                  <div className="text-4xl font-bold text-black">{stat.value}</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wider">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
@@ -129,8 +117,8 @@ export default function HeroNew({ openQuiz }) {
                 className="w-full h-full object-cover"
               />
               
-              {/* Gold accent bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-green-500 to-green-600"></div>
+              {/* Red accent bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 to-red-700"></div>
             </div>
           </motion.div>
         </div>

@@ -28,7 +28,7 @@ export default function HeroNew({ openQuiz }) {
             </p>
 
             {/* Social Proof - Profile Pics */}
-            <div className="flex items-center gap-4 py-4">
+            <div className="flex flex-wrap items-center gap-4 py-4">
               <div className="flex -space-x-3">
                 <img 
                   src="/profile-jennifer.jpg" 
@@ -56,7 +56,7 @@ export default function HeroNew({ openQuiz }) {
                   className="w-12 h-12 rounded-full border-3 border-white shadow-lg object-cover"
                 />
               </div>
-              <div>
+              <div className="flex-shrink-0">
                 <div className="flex items-center gap-1 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
@@ -64,7 +64,7 @@ export default function HeroNew({ openQuiz }) {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm font-semibold text-gray-900">
+                <p className="text-sm font-semibold text-gray-900 whitespace-nowrap">
                   Trusted by 1,000+ satisfied customers
                 </p>
               </div>

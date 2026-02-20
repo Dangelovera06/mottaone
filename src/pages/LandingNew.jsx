@@ -31,14 +31,14 @@ export default function LandingNew() {
       <header className={`fixed top-0 left-0 right-0 bg-white border-b border-gray-200 transition-all duration-300 ${isQuizOpen ? 'z-10' : 'z-50'}`}>
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-4">
           <img 
-            src="/motta one.webp" 
+            src="/motta-one-logo.png" 
             alt="Motta One" 
-            className="h-10 md:h-12 w-auto"
+            className="h-10 md:h-14 w-auto"
           />
           
           <button
             onClick={openQuiz}
-            className="px-6 py-3 bg-black text-white text-sm font-semibold rounded-none hover:bg-gray-900 transition-colors duration-300"
+            className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white text-sm font-bold hover:from-red-700 hover:to-red-800 transition-colors duration-300 shadow-lg"
           >
             Get Quote
           </button>
@@ -59,7 +59,7 @@ export default function LandingNew() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <img 
-              src="/motta one.webp" 
+              src="/motta-one-logo.png" 
               alt="Motta One" 
               className="h-8 w-auto"
             />

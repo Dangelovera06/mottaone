@@ -112,7 +112,7 @@ export default function HeroNew({ openQuiz }) {
           >
             <div className="relative aspect-[3/4] overflow-hidden">
               <img
-                src="/drive-download-20251119T185717Z-1-001/header-image.jpg"
+                src="/drive-download-20251119T185717Z-1-001/modern kitch re.png"
                 alt="Motta One Stone Work"
                 className="w-full h-full object-cover"
               />

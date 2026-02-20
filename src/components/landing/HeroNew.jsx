@@ -13,11 +13,11 @@ export default function HeroNew({ openQuiz }) {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight tracking-tight">
-              Premium Stone
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight uppercase" style={{ fontFamily: "'Playfair Display', serif" }}>
+              South Florida's Most Capable
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">
-                Remodeling
+                Stone Fabricators
               </span>
             </h1>
             

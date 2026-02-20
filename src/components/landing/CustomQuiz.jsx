@@ -184,13 +184,13 @@ export default function CustomQuiz({ onClose }) {
           {/* Trust Badge */}
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="flex -space-x-2">
-              <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white text-sm font-bold">
+              <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-sm font-bold">
                 JM
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white text-sm font-bold">
                 SK
               </div>
-              <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white text-sm font-bold">
+              <div className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center text-white text-sm font-bold">
                 RM
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function CustomQuiz({ onClose }) {
               <div className="text-sm font-bold text-black">Join 1000+ Happy Clients</div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -220,56 +220,56 @@ export default function CustomQuiz({ onClose }) {
   return (
     <div className="w-full h-full flex flex-col">
       {/* Logo and Branding Header */}
-      <div className="flex-shrink-0 px-6 pt-6 pb-4 border-b border-gray-200">
-        <div className="flex items-center justify-between mb-4">
-          <img 
-            src="/motta one.webp" 
-            alt="Motta One" 
-            className="h-10 md:h-12 w-auto"
-          />
-          
-          {/* Social Proof */}
-          <div className="flex items-center gap-3">
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white text-xs font-bold">
-                JM
+        <div className="flex-shrink-0 px-6 pt-6 pb-4 border-b border-gray-200">
+          <div className="flex items-center justify-between mb-4">
+            <img 
+              src="/motta one.webp" 
+              alt="Motta One" 
+              className="h-10 md:h-12 w-auto"
+            />
+            
+            {/* Social Proof */}
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-xs font-bold">
+                  JM
+                </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white text-xs font-bold">
+                  SK
+                </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center text-white text-xs font-bold">
+                  RM
+                </div>
               </div>
-              <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white text-xs font-bold">
-                SK
-              </div>
-              <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white text-xs font-bold">
-                RM
-              </div>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-xs font-bold text-black">1000+ Happy Clients</div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-3 h-3 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+              <div className="hidden sm:block">
+                <div className="text-xs font-bold text-black">1000+ Happy Clients</div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Progress Bar */}
-      <div className="flex-shrink-0 px-6 pt-4 pb-4">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-semibold text-gray-600">Step {currentStep} of {totalSteps}</span>
-          <span className="text-sm text-gray-500">{Math.round((currentStep / totalSteps) * 100)}%</span>
+        {/* Progress Bar */}
+        <div className="flex-shrink-0 px-6 pt-4 pb-4">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-semibold text-gray-600">Step {currentStep} of {totalSteps}</span>
+            <span className="text-sm text-gray-500">{Math.round((currentStep / totalSteps) * 100)}%</span>
+          </div>
+          <div className="w-full h-2 bg-gray-200">
+            <motion.div
+              className="h-full bg-gradient-to-r from-green-500 to-green-600"
+              initial={{ width: 0 }}
+              animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
         </div>
-        <div className="w-full h-2 bg-gray-200">
-          <motion.div
-            className="h-full bg-gradient-to-r from-gold-500 to-gold-600"
-            initial={{ width: 0 }}
-            animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
-      </div>
 
       {/* Question Content */}
       <div className="flex-1 px-6 py-8 overflow-y-auto">
@@ -297,7 +297,7 @@ export default function CustomQuiz({ onClose }) {
                       onClick={() => updateField("location", option.value)}
                       className={`p-6 text-left border-2 transition-all ${
                         formData.location === option.value
-                          ? "border-gold-500 bg-gold-50"
+                          ? "border-green-500 bg-green-50"
                           : "border-gray-200 hover:border-gray-300"
                       }`}
                     >
@@ -329,7 +329,7 @@ export default function CustomQuiz({ onClose }) {
                       onClick={() => updateField("projectType", option)}
                       className={`p-6 text-left border-2 transition-all ${
                         formData.projectType === option
-                          ? "border-gold-500 bg-gold-50"
+                          ? "border-green-500 bg-green-50"
                           : "border-gray-200 hover:border-gray-300"
                       }`}
                     >
@@ -359,7 +359,7 @@ export default function CustomQuiz({ onClose }) {
                       onClick={() => updateField("timeline", option)}
                       className={`p-6 text-left border-2 transition-all ${
                         formData.timeline === option
-                          ? "border-gold-500 bg-gold-50"
+                          ? "border-green-500 bg-green-50"
                           : "border-gray-200 hover:border-gray-300"
                       }`}
                     >
@@ -389,7 +389,7 @@ export default function CustomQuiz({ onClose }) {
                       onClick={() => updateField("budget", option)}
                       className={`p-6 text-left border-2 transition-all ${
                         formData.budget === option
-                          ? "border-gold-500 bg-gold-50"
+                          ? "border-green-500 bg-green-50"
                           : "border-gray-200 hover:border-gray-300"
                       }`}
                     >
@@ -413,7 +413,7 @@ export default function CustomQuiz({ onClose }) {
                       type="text"
                       value={formData.name}
                       onChange={(e) => updateField("name", e.target.value)}
-                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-gold-500 focus:outline-none text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-green-500 focus:outline-none text-lg"
                       placeholder="John Smith"
                     />
                   </div>
@@ -423,7 +423,7 @@ export default function CustomQuiz({ onClose }) {
                       type="email"
                       value={formData.email}
                       onChange={(e) => updateField("email", e.target.value)}
-                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-gold-500 focus:outline-none text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-green-500 focus:outline-none text-lg"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -433,7 +433,7 @@ export default function CustomQuiz({ onClose }) {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => updateField("phone", e.target.value)}
-                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-gold-500 focus:outline-none text-lg"
+                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-green-500 focus:outline-none text-lg"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -493,7 +493,7 @@ export default function CustomQuiz({ onClose }) {
             disabled={!canProceed() || isSubmitting}
             className={`px-8 py-3 text-lg font-semibold transition-all ${
               canProceed() && !isSubmitting
-                ? "bg-gradient-to-r from-gold-500 to-gold-600 text-white hover:from-gold-600 hover:to-gold-700"
+                ? "bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
             }`}
           >

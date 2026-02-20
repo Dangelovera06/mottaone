@@ -6,6 +6,7 @@ export default function ReviewsSection() {
     {
       name: "Jennifer Martinez",
       initials: "JM",
+      image: "/profile-jennifer.jpg",
       location: "Miami, FL",
       rating: 5,
       text: "Absolutely blown away! They transformed our outdated kitchen into a modern masterpiece in just 5 days. The granite countertops are stunning and the team was incredibly professional. Worth every penny!",
@@ -15,6 +16,7 @@ export default function ReviewsSection() {
     {
       name: "Sarah Kim",
       initials: "SK",
+      image: "/profile-sarah.jpg",
       location: "Fort Lauderdale, FL",
       rating: 5,
       text: "Best decision we made for our home! The quartz countertops look amazing and they finished right on schedule. No mess, no stress, and the attention to detail was incredible. Highly recommend!",
@@ -24,6 +26,7 @@ export default function ReviewsSection() {
     {
       name: "Robert Miller",
       initials: "RM",
+      image: "/profile-robert.jpg",
       location: "Boca Raton, FL",
       rating: 5,
       text: "I've used several contractors over the years, but Motta One stands out. Fast, professional, and the quality is unmatched. My kitchen looks like it belongs in a magazine. 10/10!",
@@ -33,6 +36,7 @@ export default function ReviewsSection() {
     {
       name: "Amanda Lopez",
       initials: "AL",
+      image: "/profile-amanda.jpg",
       location: "West Palm Beach, FL",
       rating: 5,
       text: "From consultation to completion, everything was seamless. They listened to our vision and delivered beyond our expectations. The marble work in our bathroom is absolutely gorgeous!",
@@ -42,6 +46,7 @@ export default function ReviewsSection() {
     {
       name: "Thomas Chen",
       initials: "TC",
+      image: "/profile-thomas.jpg",
       location: "Coral Springs, FL",
       rating: 5,
       text: "Quick, clean, and professional. The team was respectful of our home and the results speak for themselves. Our outdoor kitchen is now the centerpiece of our backyard. Couldn't be happier!",
@@ -51,6 +56,7 @@ export default function ReviewsSection() {
     {
       name: "Maria Rodriguez",
       initials: "MR",
+      image: "/profile-maria.jpg",
       location: "Pembroke Pines, FL",
       rating: 5,
       text: "Exceptional service from start to finish. The lifetime warranty gave us peace of mind, and the craftsmanship is evident in every detail. Our kitchen has become the heart of our home!",
@@ -70,21 +76,27 @@ export default function ReviewsSection() {
           className="text-center mb-16"
         >
           <div className="inline-block mb-6">
-            <div className="flex items-center gap-3 px-6 py-3 bg-gold-50 border-2 border-gold-500">
+            <div className="flex items-center gap-3 px-6 py-3 bg-green-50 border-2 border-green-500">
               <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white text-xs font-bold">
-                  JM
-                </div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white text-xs font-bold">
-                  SK
-                </div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-gradient-to-br from-gold-500 to-gold-700 flex items-center justify-center text-white text-xs font-bold">
-                  RM
-                </div>
+                <img 
+                  src="/profile-jennifer.jpg" 
+                  alt="Customer" 
+                  className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                />
+                <img 
+                  src="/profile-sarah.jpg" 
+                  alt="Customer" 
+                  className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                />
+                <img 
+                  src="/profile-robert.jpg" 
+                  alt="Customer" 
+                  className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                />
               </div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -110,12 +122,12 @@ export default function ReviewsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white border-2 border-gray-200 p-8 hover:border-gold-500 transition-all duration-300 hover:shadow-xl"
+              className="bg-white border-2 border-gray-200 p-8 hover:border-green-500 transition-all duration-300 hover:shadow-xl"
             >
               {/* Stars */}
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -128,13 +140,15 @@ export default function ReviewsSection() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold`}>
-                  {review.initials}
-                </div>
+                <img 
+                  src={review.image} 
+                  alt={review.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <div>
                   <div className="font-bold text-black">{review.name}</div>
                   <div className="text-sm text-gray-500">{review.location}</div>
-                  <div className="text-xs text-gold-600 font-semibold uppercase">{review.project}</div>
+                  <div className="text-xs text-green-600 font-semibold uppercase">{review.project}</div>
                 </div>
               </div>
             </motion.div>

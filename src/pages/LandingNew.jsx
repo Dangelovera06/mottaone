@@ -4,6 +4,7 @@ import WhyChooseUs from "../components/landing/WhyChooseUs";
 import CTAGlow from "../components/landing/CTAGlow";
 import PortfolioShowcase from "../components/landing/PortfolioShowcase";
 import ProcessSimple from "../components/landing/ProcessSimple";
+import ReviewsSection from "../components/landing/ReviewsSection";
 import QuizModal from "../components/landing/QuizModal";
 
 export default function LandingNew() {
@@ -45,6 +46,7 @@ export default function LandingNew() {
       </header>
 
       <HeroNew openQuiz={openQuiz} />
+      <ReviewsSection />
       <WhyChooseUs />
       <CTAGlow variant={1} openQuiz={openQuiz} />
       <PortfolioShowcase openQuiz={openQuiz} />

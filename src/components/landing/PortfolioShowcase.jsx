@@ -51,7 +51,7 @@ export default function PortfolioShowcase({ openQuiz }) {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600 mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-800 to-black mb-8"></div>
           <h2 className="text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
             Featured Work
           </h2>

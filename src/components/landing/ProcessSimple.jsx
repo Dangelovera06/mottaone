@@ -31,7 +31,7 @@ export default function ProcessSimple() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600 mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-800 to-black mb-8"></div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
             Our Process
           </h2>
@@ -50,8 +50,8 @@ export default function ProcessSimple() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="h-full p-8 bg-white/5 border border-white/10 hover:border-gold-500/50 transition-all duration-300">
-                <div className="text-7xl font-bold text-gold-500/20 mb-6">
+              <div className="h-full p-8 bg-white/5 border border-white/10 hover:border-gray-800 transition-all duration-300">
+                <div className="text-7xl font-bold text-black/20 mb-6">
                   {(index + 1).toString().padStart(2, '0')}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>

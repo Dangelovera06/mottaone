@@ -445,7 +445,7 @@ export default function CustomQuiz({ onClose }) {
                       value={formData.additionalInfo}
                       onChange={(e) => updateField("additionalInfo", e.target.value)}
                       rows={4}
-                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-gold-500 focus:outline-none text-lg resize-none"
+                      className="w-full px-4 py-4 border-2 border-gray-200 focus:border-black focus:outline-none text-lg resize-none"
                       placeholder="Any specific requirements or questions?"
                     />
                   </div>

@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
                 alt="Quality Craftsmanship"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-gold-500 to-gold-600"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-gray-800 to-black"></div>
             </div>
           </motion.div>
 
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             className="lg:pt-12"
           >
-            <div className="w-24 h-1 bg-gradient-to-r from-gold-500 to-gold-600 mb-8"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-gray-800 to-black mb-8"></div>
             
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-12 tracking-tight">
               Why Choose<br />Motta One
@@ -67,9 +67,9 @@ export default function WhyChooseUs() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="border-l-4 border-gold-500 pl-6"
+                  className="border-l-4 border-black pl-6"
                 >
-                  <div className="text-sm font-bold text-gold-600 mb-2 tracking-wider">
+                  <div className="text-sm font-bold text-gray-800 mb-2 tracking-wider">
                     {feature.number}
                   </div>
                   <h3 className="text-2xl font-bold text-black mb-2">{feature.title}</h3>

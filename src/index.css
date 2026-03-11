@@ -4,13 +4,27 @@
 
 /* Motta One - Premium Stone Remodeling */
 :root {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  /* Gold Brand Colors */
+  /* Luxury landing: strict B&W palette */
+  --luxury-black: #0a0a0a;
+  --luxury-white: #fafafa;
+  --luxury-gray-100: #f5f5f5;
+  --luxury-gray-200: #e5e5e5;
+  --luxury-gray-300: #d4d4d4;
+  --luxury-gray-400: #a3a3a3;
+  --luxury-gray-500: #737373;
+  --luxury-gray-600: #525252;
+  --luxury-gray-700: #404040;
+  --luxury-gray-800: #262626;
+  --luxury-font-heading: 'Cormorant Garamond', Georgia, serif;
+  --luxury-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Legacy Gold Brand Colors (other pages) */
   --gold-primary: #d4a02f;
   --gold-light: #f4e6c0;
   --gold-dark: #996d14;
@@ -107,4 +121,12 @@ h1, h2, h3, h4, h5, h6 {
   .animate-shimmer {
     animation: shimmer-slide 3s infinite;
   }
+}
+
+/* Luxury landing typography */
+.font-luxury-heading {
+  font-family: var(--luxury-font-heading);
+}
+.font-luxury-body {
+  font-family: var(--luxury-font-body);
 }

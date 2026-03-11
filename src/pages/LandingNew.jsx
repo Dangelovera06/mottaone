@@ -1,83 +1,66 @@
-import React, { useState } from "react";
-import HeroNew from "../components/landing/HeroNew";
-import WhyChooseUs from "../components/landing/WhyChooseUs";
-import CTAGlow from "../components/landing/CTAGlow";
-import PortfolioShowcase from "../components/landing/PortfolioShowcase";
-import ProcessSimple from "../components/landing/ProcessSimple";
-import ReviewsSection from "../components/landing/ReviewsSection";
+import React, { useState, useRef } from "react";
 import QuizModal from "../components/landing/QuizModal";
+import {
+  MottaLuxuryHero,
+  MottaTrust,
+  MottaProjectShowcase,
+  MottaProcess,
+  MottaTestimonials,
+  MottaStoneSelection,
+  MottaCTASection,
+  MottaFooter,
+} from "../components/landing/luxury";
 
 export default function LandingNew() {
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const projectsRef = useRef(null);
 
   const openQuiz = () => {
     setIsQuizOpen(true);
-    
-    // Track CTA click
     if (window.fbq) {
-      window.fbq('track', 'Contact', {
-        content_name: 'Get Quote Button Clicked',
-        content_category: 'CTA'
+      window.fbq("track", "Contact", {
+        content_name: "Get Quote Button Clicked",
+        content_category: "CTA",
       });
     }
   };
   const closeQuiz = () => setIsQuizOpen(false);
 
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="min-h-screen overflow-x-hidden w-full bg-white">
-      {/* Quiz Modal */}
+    <div className="min-h-screen overflow-x-hidden w-full bg-[var(--luxury-white)]">
       <QuizModal isOpen={isQuizOpen} onClose={closeQuiz} />
-      {/* Minimal Header */}
-      <header className={`fixed top-0 left-0 right-0 bg-white border-b border-gray-200 transition-all duration-300 ${isQuizOpen ? 'z-10' : 'z-50'}`}>
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-4">
-          <img 
-            src="/motta-one-logo.png" 
-            alt="Motta One" 
-            className="h-10 md:h-14 w-auto"
-            style={{ filter: 'invert(1) brightness(0)' }}
-          />
-          
+
+      {/* Minimal luxury header – black/white */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-[var(--luxury-gray-200)] bg-[var(--luxury-white)]/95 backdrop-blur-sm transition-all duration-300 ${isQuizOpen ? "z-10" : "z-50"}`}
+      >
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 sm:px-8 py-4">
+          <span className="font-luxury-heading font-light text-xl text-[var(--luxury-black)] tracking-tight">
+            Motta One
+          </span>
           <button
             onClick={openQuiz}
-            className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white text-sm font-bold hover:from-red-700 hover:to-red-800 transition-colors duration-300 shadow-lg"
+            className="font-luxury-body text-sm font-medium text-[var(--luxury-black)] border border-[var(--luxury-black)] px-5 py-2.5 hover:bg-[var(--luxury-black)] hover:text-white transition-colors"
           >
-            Get Quote
+            Get a Consultation
           </button>
         </div>
       </header>
 
-      <HeroNew openQuiz={openQuiz} />
-      <ReviewsSection />
-      <WhyChooseUs />
-      <CTAGlow variant={1} openQuiz={openQuiz} />
-      <PortfolioShowcase openQuiz={openQuiz} />
-      <CTAGlow variant={2} openQuiz={openQuiz} />
-      <ProcessSimple />
-      <CTAGlow variant={3} openQuiz={openQuiz} />
-
-      {/* Footer */}
-      <footer className="py-12 bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <img 
-              src="/motta-one-logo.png" 
-              alt="Motta One" 
-              className="h-8 w-auto"
-              style={{ filter: 'invert(1) brightness(0)' }}
-            />
-            
-            <div className="text-center md:text-left">
-              <p className="text-sm text-gray-600">
-                © 2025 Motta One. Premium Stone Remodeling Specialists.
-              </p>
-            </div>
-
-            <div className="text-sm text-gray-600">
-              (555) 123-4567
-            </div>
-          </div>
-        </div>
-      </footer>
+      <MottaLuxuryHero onConsultation={openQuiz} onProjects={scrollToProjects} />
+      <MottaTrust />
+      <div ref={projectsRef}>
+        <MottaProjectShowcase />
+      </div>
+      <MottaProcess />
+      <MottaTestimonials />
+      <MottaStoneSelection />
+      <MottaCTASection onConsultation={openQuiz} />
+      <MottaFooter />
     </div>
   );
 }

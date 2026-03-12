@@ -22,15 +22,18 @@ const SERVICE_AREAS = [
 
 export default function MottaFooter() {
   return (
-    <footer className="bg-[var(--luxury-white)] border-t border-[var(--luxury-gray-200)]">
+    <footer className="bg-[var(--luxury-black)] border-t border-[var(--luxury-gray-800)]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div>
-            <p className="font-luxury-heading font-light text-2xl text-[var(--luxury-black)]">
-              Motta One
-            </p>
-            <p className="font-luxury-body text-sm text-[var(--luxury-gray-600)] mt-2">
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/motta-one-logo.png" alt="Motta One" className="h-8 w-auto" />
+              <p className="font-luxury-heading font-light text-2xl text-[var(--luxury-white)]">
+                Motta One
+              </p>
+            </div>
+            <p className="font-luxury-body text-sm text-[var(--luxury-gray-300)] mt-2">
               Precision stone fabrication and installation.
             </p>
           </div>
@@ -41,7 +44,7 @@ export default function MottaFooter() {
               Contact
             </p>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 font-luxury-body text-sm text-[var(--luxury-gray-700)]">
+              <li className="flex items-center gap-3 font-luxury-body text-sm text-[var(--luxury-gray-200)]">
                 <Phone className="w-4 h-4 text-[var(--luxury-gray-500)]" />
                 (555) 123-4567
               </li>
@@ -61,7 +64,7 @@ export default function MottaFooter() {
             <p className="font-luxury-body text-xs font-medium text-[var(--luxury-gray-500)] tracking-wider uppercase mb-4">
               Service Areas
             </p>
-            <p className="font-luxury-body text-sm text-[var(--luxury-gray-600)] leading-relaxed">
+            <p className="font-luxury-body text-sm text-[var(--luxury-gray-300)] leading-relaxed">
               {SERVICE_AREAS.join(" · ")}
             </p>
           </div>
@@ -76,7 +79,7 @@ export default function MottaFooter() {
                 <a
                   key={i}
                   href="#"
-                  className="aspect-square overflow-hidden bg-[var(--luxury-gray-200)] block"
+                  className="aspect-square overflow-hidden bg-[var(--luxury-gray-800)] block"
                   aria-label="Instagram"
                 >
                   <img
@@ -87,23 +90,23 @@ export default function MottaFooter() {
                 </a>
               ))}
             </div>
-            <div className="inline-flex items-center gap-2 px-3 py-2 border border-[var(--luxury-gray-300)]">
-              <span className="font-luxury-body text-sm text-[var(--luxury-gray-700)]">
+            <div className="inline-flex items-center gap-2 px-3 py-2 border border-[var(--luxury-gray-700)]">
+              <span className="font-luxury-body text-sm text-[var(--luxury-gray-200)]">
                 Google Reviews
               </span>
-              <span className="font-luxury-heading font-light text-[var(--luxury-black)]">
+              <span className="font-luxury-heading font-light text-[var(--luxury-white)]">
                 4.9 ★
               </span>
             </div>
           </div>
         </div>
 
-        <div className="h-px bg-[var(--luxury-gray-200)] mt-12 mb-8" aria-hidden />
+        <div className="h-px bg-[var(--luxury-gray-800)] mt-12 mb-8" aria-hidden />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-luxury-body text-xs text-[var(--luxury-gray-500)]">
+          <p className="font-luxury-body text-xs text-[var(--luxury-gray-400)]">
             © {new Date().getFullYear()} Motta One. All rights reserved.
           </p>
-          <p className="font-luxury-body text-xs text-[var(--luxury-gray-500)]">
+          <p className="font-luxury-body text-xs text-[var(--luxury-gray-400)]">
             Licensed & Insured
           </p>
         </div>

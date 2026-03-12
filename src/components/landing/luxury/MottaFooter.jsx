@@ -2,12 +2,12 @@ import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const INSTAGRAM_PREVIEW = [
-  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=200&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&h=200&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=200&h=200&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=200&h=200&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=200&h=200&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=200&h=200&fit=crop&q=80",
+  "/ELIAS WEB/Work Image elias 1.png",
+  "/ELIAS WEB/Elias Work 3.png",
+  "/ELIAS WEB/Elias work 4.png",
+  "/ELIAS WEB/Elias Work 5.png",
+  "/ELIAS WEB/elias out work 2.png",
+  "/ELIAS WEB/ELIAS work 2.png",
 ];
 
 const SERVICE_AREAS = [

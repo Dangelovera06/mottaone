@@ -1,28 +1,27 @@
 import React from "react";
 import { Star, Shield } from "lucide-react";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=85";
+const HERO_IMAGE = "/ELIAS WEB/HERO IMAGE.png";
 
 export default function MottaLuxuryHero({ onConsultation, onProjects }) {
   return (
     <section className="relative min-h-[90vh] flex flex-col">
       {/* Cinematic full-width image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <img
           src={HERO_IMAGE}
           alt="Luxury stone countertop with dramatic lighting"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center scale-105 md:scale-100 animate-[hero-pan_18s_ease-in-out_infinite_alternate]"
         />
         <div
-          className="absolute inset-0 bg-black/40"
+          className="absolute inset-0 bg-black/45"
           aria-hidden
         />
       </div>
 
       {/* Content overlay */}
       <div className="relative z-10 flex flex-1 flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-20 pt-32 pb-24">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl animate-[fade-up_700ms_ease-out]">
           <h1 className="font-luxury-heading font-light text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] tracking-tight text-white mb-6">
             Crafted Stone Surfaces That Define Your Kitchen
           </h1>

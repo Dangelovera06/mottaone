@@ -6,21 +6,21 @@ const TESTIMONIALS = [
       "The quality of the stone and the installation was flawless. The kitchen feels like a completely new home.",
     name: "Sarah M.",
     location: "Palm Beach",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80",
+    image: "/ELIAS WEB/Work Image elias 1.png",
   },
   {
     quote:
       "From the first consultation to the final install, Motta One was professional and precise. We couldn’t be happier.",
     name: "James & Linda K.",
     location: "Miami",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&q=80",
+    image: "/ELIAS WEB/Elias Work 3.png",
   },
   {
     quote:
       "Our marble island is the centerpiece of the house. The team treated our home with real care.",
     name: "David R.",
     location: "Boca Raton",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80",
+    image: "/ELIAS WEB/Elias work 4.png",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function MottaTestimonials() {
                 <img
                   src={t.image}
                   alt=""
-                  className="w-20 h-20 rounded-full object-cover border-2 border-[var(--luxury-gray-200)]"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-[var(--luxury-gray-200)] transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
                 />
               </div>
               <p className="font-luxury-body font-light text-[var(--luxury-gray-700)] italic leading-relaxed">

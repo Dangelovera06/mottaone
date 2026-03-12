@@ -2,37 +2,37 @@ import React from "react";
 
 const PROJECTS = [
   {
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: "/ELIAS WEB/Work Image elias 1.png",
     material: "Calacatta Quartz",
     location: "Palm Beach",
     style: "Modern Kitchen",
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    image: "/ELIAS WEB/Elias Work 3.png",
     material: "Statuario Marble",
     location: "Miami",
     style: "Transitional",
   },
   {
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    image: "/ELIAS WEB/Elias work 4.png",
     material: "Black Galaxy Granite",
     location: "Fort Lauderdale",
     style: "Contemporary",
   },
   {
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    image: "/ELIAS WEB/Elias Work 5.png",
     material: "Quartzite",
     location: "Boca Raton",
     style: "Luxury Modern",
   },
   {
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+    image: "/ELIAS WEB/elias out work 2.png",
     material: "White Carrara Marble",
     location: "West Palm Beach",
     style: "Classic",
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+    image: "/ELIAS WEB/ELIAS work 2.png",
     material: "Concrete Look Quartz",
     location: "Delray Beach",
     style: "Industrial Modern",
@@ -56,13 +56,13 @@ export default function MottaProjectShowcase() {
           {PROJECTS.map((project, i) => (
             <article
               key={i}
-              className="group bg-white overflow-hidden"
+              className="group bg-white overflow-hidden will-change-transform"
             >
               <div className="aspect-[4/3] overflow-hidden bg-[var(--luxury-gray-100)]">
                 <img
                   src={project.image}
                   alt={`${project.style} in ${project.location}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:translate-y-[-2px]"
                 />
               </div>
               <div className="p-6 border-t border-[var(--luxury-gray-200)]">
